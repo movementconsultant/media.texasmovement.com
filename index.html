@@ -7,156 +7,273 @@
 <meta name="description" content="Texas Movement Media turns underreported sports and founder stories into economic leverage for athletes, brands, and cities. Content arm of Texas Movement International.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0a;--ink:#f5f5f5;--mute:#9a9a9a;--line:#1f1f1f;--accent:#c8102e}
-body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-a{color:var(--ink);text-decoration:none}
-.wrap{max-width:920px;margin:0 auto;padding:64px 24px 96px}
-.back{display:inline-block;font-size:.85rem;color:var(--mute);margin-bottom:48px;letter-spacing:.04em;transition:color .2s}
-.back:hover{color:var(--ink)}
-.eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
-h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:20px}
-.lede{font-size:1.15rem;color:#d0d0d0;max-width:640px;margin-bottom:40px;line-height:1.7}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:80px}
-.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;transition:opacity .2s;display:inline-block}
-.btn-primary:hover{opacity:.88}
-.btn-secondary{border:1px solid var(--line);color:var(--ink);padding:14px 28px;border-radius:8px;font-weight:500;font-size:.95rem;transition:border-color .2s;display:inline-block}
-.btn-secondary:hover{border-color:var(--mute)}
-section{margin-bottom:72px}
-h2{font-size:1.5rem;font-weight:700;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-h3{font-size:1.05rem;font-weight:600;margin-bottom:8px}
-.body-text{color:#d0d0d0;line-height:1.75;margin-bottom:16px;max-width:720px}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{border:1px solid var(--line);border-radius:14px;background:#0f0f0f;padding:24px}
-.card-tag{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;font-weight:600}
-.card p{color:var(--mute);font-size:.9rem;line-height:1.6;margin-bottom:12px}
-.card a.playlist{font-size:.8rem;color:var(--accent);letter-spacing:.04em;border-bottom:1px solid var(--accent);padding-bottom:1px;transition:opacity .2s}
-.card a.playlist:hover{opacity:.75}
-.pillar{border-left:3px solid var(--accent);padding:20px 24px;background:#0f0f0f;border-radius:0 14px 14px 0;margin-bottom:16px}
-.pillar h3{margin-bottom:6px;font-size:1rem}
-.pillar p{color:var(--mute);font-size:.9rem;line-height:1.6}
-.bullet-list{list-style:none;margin:16px 0 0 0}
-.bullet-list li{color:#d0d0d0;font-size:.95rem;padding:10px 0 10px 24px;border-bottom:1px solid var(--line);position:relative;line-height:1.65}
-.bullet-list li::before{content:"&#8212;";position:absolute;left:0;color:var(--accent)}
-.bullet-list li:last-child{border-bottom:none}
-.social-list{list-style:none;margin:16px 0 0 0}
-.social-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
-.social-list li:last-child{border-bottom:none}
-.social-label{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;min-width:80px;margin-top:2px}
-.social-list p{color:#d0d0d0;font-size:.9rem;line-height:1.55}
-.social-list a{color:var(--accent)}
-.team-block{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:32px;margin-top:24px}
-.team-block p{color:#d0d0d0;font-size:.95rem;line-height:1.7;margin-bottom:16px}
-.team-block .member{padding:12px 0 12px 24px;border-top:1px solid var(--line);position:relative}
-.team-block .member::before{content:"&#8212;";position:absolute;left:0;color:var(--accent)}
-.team-block .member strong{display:block;margin-bottom:2px}
-.team-block .member span{color:var(--mute);font-size:.88rem}
-.ecosystem{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:32px;margin-bottom:56px}
-.ecosystem p{color:#d0d0d0;font-size:.95rem;line-height:1.75;margin-bottom:20px}
-footer{border-top:1px solid var(--line);margin-top:80px;padding-top:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.85rem;color:var(--mute)}
-footer a{color:var(--mute);transition:color .2s}
-footer a:hover{color:var(--ink)}
+:root{
+  --bg:#0b0c0e;
+  --surface:#111318;
+  --surface2:#181b21;
+  --ink:#f0f2f5;
+  --mute:#8a8f9a;
+  --line:#222530;
+  --gold:#c9a84c;
+  --gold-dim:#8a6e2a;
+  --red:#c8102e;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,12,14,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:0 32px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px}
+.nav-logo{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--gold);color:#0b0c0e;padding:8px 18px;border-radius:5px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:opacity .2s;white-space:nowrap}
+.nav-cta:hover{opacity:.85}
+@media(max-width:640px){.nav-links{display:none}}
+
+/* WRAP */
+.wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+@media(max-width:640px){.wrap{padding:0 20px}}
+
+/* HERO */
+.hero{padding:96px 0 80px;border-bottom:1px solid var(--line)}
+.hero-eyebrow{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:20px}
+.hero-h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:24px;max-width:760px}
+.hero-h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:1.1rem;color:var(--mute);max-width:600px;line-height:1.75;margin-bottom:40px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:#0b0c0e;padding:13px 28px;border-radius:5px;font-weight:700;font-size:.9rem;letter-spacing:.04em;transition:opacity .2s;display:inline-block}
+.btn-primary:hover{opacity:.85}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);padding:13px 28px;border-radius:5px;font-weight:500;font-size:.9rem;transition:border-color .2s,color .2s;display:inline-block}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn-outline{border:1px solid var(--gold);color:var(--gold);padding:13px 28px;border-radius:5px;font-weight:600;font-size:.9rem;transition:background .2s,color .2s;display:inline-block}
+.btn-outline:hover{background:var(--gold);color:#0b0c0e}
+
+/* SECTIONS */
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.section-label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--mute);max-width:600px;line-height:1.75;margin-bottom:48px}
+.body-text{color:#c8ccd6;line-height:1.8;margin-bottom:16px;max-width:680px}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.card-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.card-grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:28px;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold-dim);transform:translateY(-2px)}
+.card-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.card h3{font-size:1.05rem;font-weight:700;line-height:1.3}
+.card p{color:var(--mute);font-size:.88rem;line-height:1.65;flex:1}
+.card-link{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--gold-dim);padding-bottom:2px;align-self:flex-start;transition:border-color .2s}
+.card-link:hover{border-color:var(--gold)}
+
+/* THESIS BULLETS */
+.thesis-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:8px}
+.thesis-item{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:20px 24px}
+.thesis-item strong{display:block;font-size:.92rem;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.thesis-item p{color:var(--mute);font-size:.87rem;line-height:1.65}
+
+/* INBOUND PITCH */
+.pitch-band{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:48px;margin-top:48px}
+.pitch-band h3{font-size:1.5rem;font-weight:800;letter-spacing:-.01em;margin-bottom:10px}
+.pitch-band p{color:var(--mute);font-size:.95rem;max-width:560px;line-height:1.7;margin-bottom:28px}
+
+/* TEAM */
+.founder-block{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:32px;margin-top:32px}
+.founder-block .name{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+.founder-block .title{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+.founder-block p{color:var(--mute);font-size:.9rem;line-height:1.7}
+.flywheel{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin:32px 0;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fly-step{padding:20px 24px;flex:1;min-width:160px;border-right:1px solid var(--line)}
+.fly-step:last-child{border-right:none}
+.fly-num{font-size:1.4rem;font-weight:800;color:var(--gold);line-height:1;margin-bottom:6px}
+.fly-step strong{display:block;font-size:.85rem;font-weight:700;margin-bottom:3px}
+.fly-step p{color:var(--mute);font-size:.78rem;line-height:1.5}
+@media(max-width:640px){.flywheel{flex-direction:column}.fly-step{border-right:none;border-bottom:1px solid var(--line)}.fly-step:last-child{border-bottom:none}}
+
+/* SOCIAL LINKS */
+.social-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.social-chip{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 16px;font-size:.8rem;color:var(--mute);transition:border-color .2s,color .2s;display:inline-flex;align-items:center;gap:8px}
+.social-chip:hover{border-color:var(--gold);color:var(--gold)}
+.social-chip span{color:var(--gold);font-weight:600}
+
+/* FOOTER */
+footer{padding:40px 0 48px}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px}
+.footer-brand .wordmark{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.footer-brand .wordmark span{color:var(--gold)}
+.footer-brand p{font-size:.8rem;color:var(--mute)}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:.8rem;color:var(--mute);transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+
+/* DATA ACCENT */
+.data-accent{color:var(--gold);font-weight:700}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<a href="https://texasmovement.com" class="back">&#8592; Texas Movement International</a>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Texas Movement <span>Media</span></div>
+    <ul class="nav-links">
+      <li><a href="#what">What We Do</a></li>
+      <li><a href="#why">Thesis</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#pitch">Pitch</a></li>
+    </ul>
+    <a href="https://www.youtube.com/@TexasMovementMedia" class="nav-cta" target="_blank" rel="noopener">Watch on YouTube</a>
+  </div>
+</nav>
 
 <!-- HERO -->
-<div class="eyebrow">Texas Movement Media &middot; Content Arm of TMI</div>
-<h1>Stories that move deals forward.</h1>
-<p class="lede">TMM documents athletes and founders at the moment contracts, projects, and city plays are being made&#8202;&#8212;&#8202;so sponsors and investors can move faster with better information and less guesswork.</p>
-<div class="cta-row">
-  <a href="https://www.youtube.com/@TexasMovementMedia" class="btn-primary" target="_blank" rel="noopener">Watch on YouTube</a>
-  <a href="#why" class="btn-secondary">About Texas Movement Media</a>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-eyebrow">Texas Movement Media &middot; Content Arm of TMI</div>
+    <h1 class="hero-h1">Stories that <em>move deals</em> forward.</h1>
+    <p class="hero-sub">TMM documents athletes and founders at the moment contracts, projects, and city plays are being made&thinsp;&mdash;&thinsp;so sponsors and investors can move faster with better information and less guesswork.</p>
+    <div class="cta-row">
+      <a href="https://www.youtube.com/@TexasMovementMedia" class="btn-primary" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a href="#why" class="btn-ghost">About Texas Movement Media</a>
+    </div>
+  </div>
 </div>
 
 <!-- WHAT WE DO -->
-<section id="what-we-do">
-  <h2>What We Do</h2>
-  <p class="body-text">TMM runs three content lanes. Each one is designed to shorten the distance between a decision-maker and the information they need.</p>
-  <div class="card-grid">
-    <div class="card">
-      <div class="card-tag">Pro Talks</div>
-      <h3>Contract-level conversations.</h3>
-      <p>Long-form interviews with athletes and founders focused on their numbers, deal structures, and real constraints. Sponsors and partners can see exactly who is ready for serious engagements before the first meeting.</p>
-      <a href="https://www.youtube.com/@TexasMovementMedia" class="playlist" target="_blank" rel="noopener">View playlist &#8594;</a>
+<div class="wrap">
+  <section id="what">
+    <div class="section-label">Content Lanes</div>
+    <h2>What We Produce</h2>
+    <p class="section-sub">Three formats. Each designed to shorten the distance between a decision-maker and the information they need to act.</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-tag">Pro Talks</div>
+        <h3>Contract-level conversations.</h3>
+        <p>Long-form interviews with athletes and founders focused on real numbers, deal structures, and operating constraints. Sponsors and partners can evaluate who is ready for serious engagements&thinsp;&mdash;&thinsp;before the first meeting.</p>
+        <a href="https://www.youtube.com/@TexasMovementMedia" class="card-link" target="_blank" rel="noopener">View Playlist &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-tag">Movement Features</div>
+        <h3>Performance arcs in 3&ndash;5 minutes.</h3>
+        <p>Short breakdowns of performance trajectories and operating models. Brands and partners get a clear picture of who someone is and what they&rsquo;re building&thinsp;&mdash;&thinsp;fast enough to use in a pitch or diligence pass.</p>
+        <a href="https://www.youtube.com/@TexasMovementMedia" class="card-link" target="_blank" rel="noopener">View Playlist &rarr;</a>
+      </div>
+      <div class="card">
+        <div class="card-tag">City Plays</div>
+        <h3>Local economics on camera.</h3>
+        <p>Segments covering neighborhoods, facilities, and development projects&thinsp;&mdash;&thinsp;and how each one shifts local business activity. Cities and operators get story assets they can use when asking for sponsorship or capital.</p>
+        <a href="https://www.youtube.com/@TexasMovementMedia" class="card-link" target="_blank" rel="noopener">View Playlist &rarr;</a>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-tag">Movement Features</div>
-      <h3>Performance arcs in 3&#8202;&#8211;&#8202;5 minutes.</h3>
-      <p>Short breakdowns of performance trajectories and operating models. Brands and partners get a clear picture of who someone is and what they&#8217;re building&#8202;&#8212;&#8202;fast enough to use in a pitch or diligence review.</p>
-      <a href="https://www.youtube.com/@TexasMovementMedia" class="playlist" target="_blank" rel="noopener">View playlist &#8594;</a>
-    </div>
-    <div class="card">
-      <div class="card-tag">City Plays</div>
-      <h3>Local economics on camera.</h3>
-      <p>Segments covering specific neighborhoods, facilities, and development projects&#8202;&#8212;&#8202;and how each one shifts local business activity. Cities and operators get story assets they can use when asking for sponsorship or capital.</p>
-      <a href="https://www.youtube.com/@TexasMovementMedia" class="playlist" target="_blank" rel="noopener">View playlist &#8594;</a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY THIS EXISTS -->
-<section id="why">
-  <h2>Why This Exists</h2>
-  <p class="body-text">Attention already exists around athletes and founders in overlooked markets. The problem is that decision-makers&#8202;&#8212;&#8202;sponsors, investors, city planners&#8202;&#8212;&#8202;can&#8217;t act on attention alone. They need verifiable stories: real performance data, clear contract thinking, and honest project context. Without that, deals stall or never start.</p>
-  <p class="body-text">TMM reduces discovery and due-diligence friction by packaging those stories into watchable content that decision-makers can share, reference, and act on.</p>
-  <ul class="bullet-list">
-    <li><strong>For brands:</strong> see on camera who can credibly deliver on a campaign&#8202;&#8212;&#8202;before committing budget or legal overhead.</li>
-    <li><strong>For investors and partners:</strong> understand how an athlete or founder actually thinks about contracts, risk, and execution&#8202;&#8212;&#8202;not just highlights.</li>
-    <li><strong>For cities and operators:</strong> get story assets built around real project data that hold up when asking for sponsorship, grants, or capital.</li>
-  </ul>
-</section>
-
-<!-- FOLLOW THE NETWORK -->
-<section id="follow">
-  <h2>Follow the Network</h2>
-  <p class="body-text">We keep one primary handle per platform. Everything feeds back to the same body of work.</p>
-  <ul class="social-list">
-    <li>
-      <span class="social-label">YouTube</span>
-      <p>Full interviews and series &#8212; <a href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener">@TexasMovementMedia</a>. This is the primary archive. Start here.</p>
-    </li>
-    <li>
-      <span class="social-label">Instagram</span>
-      <p>Day-to-day builds, clips, and behind-the-process &#8212; <a href="#">@[AlexanderHandle]</a>. Host and creative director, Alexander Varghese Mathai.</p>
-    </li>
-    <li>
-      <span class="social-label">TikTok</span>
-      <p>Short-form sprint breakdowns and deal-math clips &#8212; <a href="#">@[TikTokHandle]</a>. Fast cuts, real numbers, no filler.</p>
-    </li>
-  </ul>
-</section>
-
-<!-- FOUNDER + TEAM -->
-<section id="team">
-  <h2>Who&#8217;s Behind This</h2>
-  <p class="body-text">TMM is built to operate with multiple hosts, producers, and contributors across verticals and markets. The system is larger than any single personality. Below is the current production leadership for early seasons.</p>
-  <div class="team-block">
-    <p>Texas Movement Media is designed to expand. As TMI grows its host roster, producer network, and city coverage, TMM&#8217;s content infrastructure supports new contributors without rebuilding from scratch. The brand belongs to the system, not any one individual.</p>
-    <div class="member">
-      <strong>Alexander Varghese Mathai &#8212; Current Lead Host &amp; Creative Director (Early Seasons)</strong>
-      <span>Founder &amp; President of Texas Movement International. Creative director and lead host of TMM. Flagship model and athlete at HERO By TM, currently in active training across multiple performance disciplines. Alexander built TMI as a multi-vertical system&#8202;&#8212;&#8202;one designed from the start to be operated, expanded, and eventually led by others alongside him.</span>
-    </div>
-  </div>
-</section>
-
-<!-- TMI ECOSYSTEM BRIDGE -->
-<div class="ecosystem" id="ecosystem">
-  <div class="eyebrow">Texas Movement International</div>
-  <p>Texas Movement Media is one of seven verticals inside Texas Movement International, a systems company focused on performance science, AI strategy, and city-scale projects. TMI uses media to build credible attention, convert that attention into consulting and education revenue, and then deploy that capital into infrastructure and city-level deals&#8202;&#8212;&#8202;a compounding flywheel from story to contract to project.</p>
-  <div class="cta-row" style="margin-bottom:0">
-    <a href="https://texasmovement.com" class="btn-primary">See the full TMI ecosystem</a>
-    <a href="https://consulting.texasmovement.com" class="btn-secondary">Work with our consulting arm</a>
-  </div>
+  </section>
 </div>
 
-<footer>
-  <span>&#169; 2025 Texas Movement Media. Part of Texas Movement International.</span>
-  <a href="https://texasmovement.com">texasmovement.com</a>
-</footer>
-
+<!-- THESIS -->
+<div class="wrap">
+  <section id="why">
+    <div class="section-label">The Thesis</div>
+    <h2>Why This Exists</h2>
+    <p class="body-text">Attention already exists around athletes and founders in overlooked markets. The problem is that decision-makers&thinsp;&mdash;&thinsp;sponsors, investors, city planners&thinsp;&mdash;&thinsp;can&rsquo;t act on attention alone. They need verifiable stories: real performance data, clear contract thinking, and honest project context. Without that, deals stall or never start.</p>
+    <p class="body-text">TMM reduces discovery and due-diligence friction by packaging those stories into watchable content that decision-makers can share, reference, and act on.</p>
+    <div class="thesis-grid">
+      <div class="thesis-item">
+        <strong>For Brands</strong>
+        <p>See on camera who can credibly deliver on a campaign&thinsp;&mdash;&thinsp;before committing budget or legal overhead.</p>
+      </div>
+      <div class="thesis-item">
+        <strong>For Investors &amp; Partners</strong>
+        <p>Understand how an athlete or founder actually thinks about contracts, risk, and execution&thinsp;&mdash;&thinsp;not just highlights.</p>
+      </div>
+      <div class="thesis-item">
+        <strong>For Cities &amp; Operators</strong>
+        <p>Get story assets built around real project data that hold up when asking for sponsorship, grants, or capital.</p>
+      </div>
+    </div>
+  </section>
 </div>
+
+<!-- INBOUND PITCH -->
+<div class="wrap">
+  <section id="pitch">
+    <div class="section-label">Inbound</div>
+    <h2>Submit a Project or Pitch a Partnership</h2>
+    <div class="pitch-band">
+      <h3>Ready to be considered?</h3>
+      <p>We review athlete profiles, founder pitch decks, and municipal development briefs for upcoming production cycles. Serious inquiries only&thinsp;&mdash;&thinsp;include context, numbers, and a clear ask.</p>
+      <div class="cta-row">
+        <a href="mailto:texasmovementmedia@gmail.com?subject=TMM%20Pitch%3A%20%5BName%20%2F%20Company%5D" class="btn-primary">Pitch an Athlete or Founder</a>
+        <a href="mailto:texasmovementmedia@gmail.com?subject=TMM%20Partnership%20Inquiry" class="btn-outline">Become a Brand Partner</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ECOSYSTEM + TEAM -->
+<div class="wrap">
+  <section id="team">
+    <div class="section-label">Ecosystem &amp; Team</div>
+    <h2>The TMI Flywheel</h2>
+    <p class="body-text">Texas Movement Media is one of seven verticals inside Texas Movement International&thinsp;&mdash;&thinsp;a systems company focused on performance science, AI strategy, and city-scale projects. Media is where credible attention is built. That attention converts into consulting and education revenue. That revenue deploys into infrastructure and city-level deals.</p>
+    <div class="flywheel">
+      <div class="fly-step">
+        <div class="fly-num">01</div>
+        <strong>Media</strong>
+        <p>TMM builds verifiable attention around athletes, founders, and city projects.</p>
+      </div>
+      <div class="fly-step">
+        <div class="fly-num">02</div>
+        <strong>Consulting &amp; Education</strong>
+        <p>Attention converts to advisory revenue and AI strategy engagements via TMI Consulting.</p>
+      </div>
+      <div class="fly-step">
+        <div class="fly-num">03</div>
+        <strong>Infrastructure</strong>
+        <p>Capital and credibility deploy into city projects, facilities, and real asset development.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;margin-bottom:48px">
+      <a href="https://texasmovement.com" class="btn-primary">See the Full TMI Ecosystem</a>
+      <a href="https://consulting.texasmovement.com" class="btn-ghost">Work with Our Consulting Arm</a>
+    </div>
+
+    <div class="section-label" style="margin-top:16px">Production Leadership</div>
+    <p class="body-text">TMM is built to operate with multiple hosts, producers, and contributors across verticals and markets. The brand belongs to the system&thinsp;&mdash;&thinsp;not any single personality. Below is the current production leadership for early seasons.</p>
+    <div class="founder-block">
+      <div class="name">Alexander Varghese Mathai</div>
+      <div class="title">Current Lead Host &amp; Creative Director &mdash; Early Seasons</div>
+      <p>Founder &amp; President of Texas Movement International. Creative director and lead host of TMM. Flagship model and athlete at HERO By TM, currently in active training across multiple performance disciplines. Alexander built TMI as a multi-vertical system designed from the start to be operated, expanded, and eventually led by others alongside him. New hosts, producers, and city contributors can be integrated without disrupting the brand or its infrastructure.</p>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<div class="wrap">
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="wordmark">Texas Movement <span>Media</span></div>
+        <p>Content arm of Texas Movement International &copy; 2025</p>
+        <div class="social-row" style="margin-top:14px">
+          <a href="https://www.youtube.com/@TexasMovementMedia" class="social-chip" target="_blank" rel="noopener">YouTube <span>@TexasMovementMedia</span></a>
+          <a href="https://www.instagram.com/AlexanderVMathai" class="social-chip" target="_blank" rel="noopener">Instagram <span>@AlexanderVMathai</span></a>
+          <a href="https://www.tiktok.com/@AlexanderVMathai" class="social-chip" target="_blank" rel="noopener">TikTok <span>@AlexanderVMathai</span></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://texasmovement.com">TMI Ecosystem</a>
+        <a href="https://consulting.texasmovement.com">Consulting</a>
+        <a href="mailto:texasmovementmedia@gmail.com">Contact</a>
+        <a href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
 </body>
 </html>
