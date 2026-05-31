@@ -83,6 +83,9 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 .footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
 .footer-links button{background:var(--surface);border:1px solid var(--line);color:var(--mute);padding:8px 16px;border-radius:4px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif}
 @media(max-width:680px){.two-col,.pipeline,.form-grid,.stats{grid-template-columns:1fr}.series-row{grid-template-columns:1fr;gap:10px}}
+.card-links{display:flex;flex-direction:column;gap:6px;margin-top:14px}
+.card-links a{color:var(--red);font-size:13px;font-weight:700;letter-spacing:.5px}
+.card-links a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -141,23 +144,15 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <section id="start" class="page">
 <div class="eyebrow">Start Here</div>
 <h1 style="font-size:clamp(40px,7vw,72px);margin-top:8px">Five episodes. Then you get it.</h1>
-<p class="lead">New to Texas Movement Media? These are the fastest on-ramps into what we do and why it matters.</p>
+<p class="lead">New to Texas Movement Media? Here’s the fast map of the site — the lanes to watch and the quickest ways to work with us or pitch a show.</p>
 <div class="divider"></div>
 <div class="grid">
-<div class="card"><div class="tag">Shame of Emperors</div><h3>Ep 01 — The Audit</h3><p>Why we started documenting the systems nobody else will touch.</p></div>
-<div class="card"><div class="tag">Pro Talks</div><h3>Ep 02 — The Operator</h3><p>A founder breaks down building outside broken institutions.</p></div>
-<div class="card"><div class="tag">HERO</div><h3>Ep 03 — Performance</h3><p>The science of athletic excellence, without the mythology.</p></div>
-<div class="card"><div class="tag">Consulting</div><h3>Ep 04 — B2B</h3><p>How systems thinking translates into real organizational change.</p></div>
-<div class="card"><div class="tag">TMM Onramp</div><h3>Ep 05 — The Pitch</h3><p>What it looks like when a creator joins the network.</p></div>
-</div>
-<div class="section-label" style="margin-top:48px">Content lanes</div>
-<div class="lanes">
-<div class="lane"><h4>Shame of Emperors</h4><p>Diaspora audits and uncomfortable systems analysis.</p></div>
-<div class="lane"><h4>Pro Talks</h4><p>Long-form interviews with founders and operators.</p></div>
-<div class="lane"><h4>HERO / Performance</h4><p>Athletic excellence and performance science.</p></div>
-<div class="lane"><h4>Consulting / B2B</h4><p>Systems thinking for organizations.</p></div>
-<div class="lane"><h4>TMM Onramp</h4><p>New creators entering the network.</p></div>
-<div class="lane"><h4>Shorts / Clips</h4><p>Fast cuts from across every series.</p></div>
+<div class="card"><div class="tag">Watch</div><h3>Shame of Emperors</h3><p>Start with our latest diaspora audit and systems breakdown.</p><a href="https://youtu.be/5u33Y2hljYY?si=rTLp8c0ESlRD1hF6" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Watch the breakdown →</a></div>
+<div class="card"><div class="tag">Watch</div><h3>Pro Talks</h3><p>Long-form interviews with founders, athletes, and operators.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyS5XGjS_MHPkYX01JgrMZc" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Explore Pro Talks →</a></div>
+<div class="card"><div class="tag">Watch</div><h3>HERO / Performance</h3><p>The science of athletic excellence, training, and recovery.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmymBV7YbPmP9kBVdjonTguo" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">See HERO content →</a></div>
+<div class="card"><div class="tag">Work</div><h3>Consulting / B2B</h3><p>See how we work with organizations — watch the lane or get in touch.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmzV68aSCeHsHku1-AOE8ga1" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Watch the lane →</a><a href="#" onclick="showPage('work');return false" style="color:var(--red);font-weight:700;margin-top:6px;display:inline-block">Work With Us →</a></div>
+<div class="card"><div class="tag">Pitch</div><h3>Submit a Show</h3><p>Thinking about hosting a show? Founders, athletes, and creators welcome.</p><a href="#" onclick="showPage('submit');return false" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Submit a Show →</a></div>
+<div class="card"><div class="tag">Browse</div><h3>All Series</h3><p>Jump into the full Watch hub and pick any lane.</p><a href="#" onclick="showPage('watch');return false" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Open the Watch hub →</a></div>
 </div>
 <div class="btn-group">
 <button class="btn-primary" onclick="showPage('watch')">Browse All Series</button>
@@ -174,22 +169,22 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="series-row">
 <div class="num">01</div>
 <div><h3>Shame of Emperors</h3><p>Diaspora audits and systems analysis that name what others won't.</p></div>
-<a class="btn-secondary" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">View Playlist →</a>
+<a class="btn-secondary" href="https://youtu.be/5u33Y2hljYY?si=rTLp8c0ESlRD1hF6" target="_blank" rel="noopener noreferrer">View Playlist →</a>
 </div>
 <div class="series-row">
 <div class="num">02</div>
 <div><h3>Pro Talks</h3><p>Long-form interviews with founders, athletes, and operators.</p></div>
-<a class="btn-secondary" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">View Playlist →</a>
+<a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyS5XGjS_MHPkYX01JgrMZc" target="_blank" rel="noopener noreferrer">View Playlist →</a>
 </div>
 <div class="series-row">
 <div class="num">03</div>
 <div><h3>HERO / Performance</h3><p>The science of athletic excellence, training, and recovery.</p></div>
-<a class="btn-secondary" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">View Playlist →</a>
+<a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLfuA6emw6UmymBV7YbPmP9kBVdjonTguo" target="_blank" rel="noopener noreferrer">View Playlist →</a>
 </div>
 <div class="series-row">
 <div class="num">04</div>
 <div><h3>Consulting / B2B</h3><p>Systems thinking applied to real organizational problems.</p></div>
-<a class="btn-secondary" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">View Playlist →</a>
+<a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLfuA6emw6UmzV68aSCeHsHku1-AOE8ga1" target="_blank" rel="noopener noreferrer">View Playlist →</a>
 </div>
 <div class="series-row">
 <div class="num">05</div>
@@ -199,7 +194,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="series-row">
 <div class="num">06</div>
 <div><h3>Shorts / Clips</h3><p>Fast cuts and highlights from across every TMM series.</p></div>
-<a class="btn-secondary" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">View Playlist →</a>
+<a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyS5XGjS_MHPkYX01JgrMZc" target="_blank" rel="noopener noreferrer">View Playlist →</a>
 </div>
 </div>
 </section>
@@ -210,11 +205,11 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <p class="lead">TMM works with brands, founders, and organizations who want content that actually moves culture.</p>
 <div class="divider"></div>
 <div class="grid">
-<div class="card"><div class="tag">Advisory</div><h3>Consulting</h3><p>Systems and media strategy for organizations navigating change.</p></div>
-<div class="card"><div class="tag">Studio</div><h3>Media Production</h3><p>Original series, interviews, and documentary-style programming.</p></div>
-<div class="card"><div class="tag">Partnerships</div><h3>Brand Partnerships</h3><p>Aligned brands integrated authentically across our verticals.</p></div>
-<div class="card"><div class="tag">Sponsorship</div><h3>Sponsored Content</h3><p>Purpose-built sponsored segments that respect the audience.</p></div>
-<div class="card"><div class="tag">Live</div><h3>Speaking / Hosting</h3><p>Hosting, speaking, and collaboration across events and platforms.</p></div>
+<div class="card"><div class="tag">Advisory</div><h3>Consulting</h3><p>Systems and media strategy for organizations navigating change.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">consulting.texasmovement.com →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-consulting/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Consulting →</a></div></div>
+<div class="card"><div class="tag">Studio</div><h3>Media Production</h3><p>Original series, interviews, and documentary-style programming.</p><div class="card-links"><a href="https://www.tiktok.com/@alexandervmathai" target="_blank" rel="noopener noreferrer">TikTok – @AlexanderVMathai →</a><a href="https://www.tiktok.com/@herofootwear" target="_blank" rel="noopener noreferrer">TikTok – @HEROfootwear →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-media/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Media →</a><a href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">YouTube – Texas Movement Media →</a></div></div>
+<div class="card"><div class="tag">Partnerships</div><h3>Brand Partnerships</h3><p>Aligned brands integrated authentically across our verticals.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">consulting.texasmovement.com →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-consulting/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Consulting →</a></div></div>
+<div class="card"><div class="tag">Sponsorship</div><h3>Sponsored Content</h3><p>Purpose-built sponsored segments that respect the audience.</p><div class="card-links"><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-media/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Media →</a></div></div>
+<div class="card"><div class="tag">Live</div><h3>Speaking / Hosting</h3><p>Hosting, speaking, and collaboration across events and platforms.</p><div class="card-links"><a href="https://www.tiktok.com/@alexandervmathai" target="_blank" rel="noopener noreferrer">Live / Broadcasts – TikTok @AlexanderVMathai →</a></div></div>
 </div>
 <div class="btn-group">
 <button class="btn-primary" onclick="showPage('about')">Get In Touch</button>
@@ -287,7 +282,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 </div>
 <div class="section-label" style="margin-top:48px">Contact</div>
 <div class="contact-grid">
-<div class="lane"><h4>General</h4><p><a href="mailto:TexasMovementMedia@gmail.com">hello@texasmovement.com</a></p></div>
+<div class="lane"><h4>General</h4><p><a href="mailto:TexasMovementMedia@gmail.com">TexasMovementMedia@gmail.com</a></p></div>
 <div class="lane"><h4>Submissions</h4><p><a href="mailto:TexasMovementMedia@gmail.com">shows@texasmovement.com</a></p></div>
 <div class="lane"><h4>Partnerships</h4><p><a href="mailto:TexasMovementMedia@gmail.com">partners@texasmovement.com</a></p></div>
 <div class="lane"><h4>Press</h4><p><a href="mailto:TexasMovementMedia@gmail.com">press@texasmovement.com</a></p></div>
