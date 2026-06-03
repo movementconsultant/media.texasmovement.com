@@ -25,7 +25,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.92);backdrop-filt
 .nav-links button{background:none;border:none;color:var(--mute);font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:8px 12px;cursor:pointer;border-radius:4px}
 .nav-links button:hover{color:var(--ink)}
 .nav-links button.active{color:var(--ink);background:var(--surface2)}
-.page{display:none;padding:64px 0;animation:fade .3s ease}
+.page{display:none;padding:40px 0;animation:fade .3s ease}
 .page.active{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .hero h1{font-size:clamp(48px,9vw,104px)}
@@ -36,7 +36,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.92);backdrop-filt
 .btn-primary:hover{filter:brightness(1.08)}
 .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line);padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;display:inline-block}
 .btn-secondary:hover{border-color:var(--ink)}
-.divider{height:1px;background:var(--line);margin:56px 0}
+.divider{height:1px;background:var(--line);margin:36px 0}
 .section-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:28px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .two-col h2{font-size:clamp(30px,5vw,52px)}
@@ -86,6 +86,27 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 .card-links{display:flex;flex-direction:column;gap:6px;margin-top:14px}
 .card-links a{color:var(--red);font-size:13px;font-weight:700;letter-spacing:.5px}
 .card-links a:hover{text-decoration:underline}
+
+/* Home: surface latest video previews above the fold */
+#home>.divider:first-of-type{margin:22px 0}
+#home .hero h1{font-size:clamp(40px,7vw,84px);line-height:1.0}
+#home .hero .lead{margin-top:16px}
+#home .hero .btn-group{margin-top:22px}
+/* Featured Series as a slim banner */
+#home .card[style*="--red"]{padding:18px 24px}
+#home .card[style*="--red"] h2{margin-top:4px;font-size:clamp(24px,3.4vw,34px)}
+#home .card[style*="--red"] p{margin-top:8px}
+#home .card[style*="--red"] .btn-group{margin-top:12px}
+/* Latest from TMM: bigger, edge-to-edge thumbnails so videos feel like the main attraction */
+#home .grid .card{padding:0;overflow:hidden}
+#home .grid .card>a:first-child{display:block}
+#home .grid .card img{aspect-ratio:16/9;object-fit:cover;border-radius:0!important;border:0!important;border-bottom:1px solid var(--line)!important;margin:0;display:block}
+#home .grid .card h3{margin:14px 18px 0}
+#home .grid .card p{margin:8px 18px 0}
+#home .grid .card>a:last-child{margin:14px 18px 18px}
+@media(max-width:680px){
+  #home .card[style*="--red"]{padding:18px 20px}
+}
 </style>
 </head>
 <body>
@@ -116,30 +137,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <button class="btn-secondary" onclick="showPage('submit')">Submit a Show</button>
 </div>
 </div>
-<div class="divider"></div>
-<div class="section-label">What is TMM</div>
-<div class="two-col">
-<h2>Not a podcast network. A media infrastructure.</h2>
-<div>
-<p>Texas Movement Media is the content arm of Texas Movement International — producing original series, interviews, and documentary-style programming at the intersection of sport, culture, and systems thinking.</p>
-<p>We don't cover the mainstream. We document what the mainstream ignores: diaspora audits, athletic excellence, performance science, and the founders building alternatives to broken institutions.</p>
-</div>
-</div>
-<div class="stats">
-<div class="stat"><div class="n">6</div><div class="l">Active Verticals</div></div>
-<div class="stat"><div class="n">TMI</div><div class="l">Parent Platform</div></div>
-<div class="stat"><div class="n">TX</div><div class="l">Built in Texas</div></div>
-</div>
-<div class="divider"></div>
-<div class="section-label">How to use this site</div>
-<div class="grid">
-<div class="card"><div class="tag">New here?</div><h3>Start Here</h3><p>The five episodes that explain TMM faster than anything else. Begin here.</p><div class="arrow" onclick="showPage('start')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Browse</div><h3>Watch All Series</h3><p>Shame of Emperors, Pro Talks, HERO, Consulting, and more — all in one place.</p><div class="arrow" onclick="showPage('watch')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Collaborate</div><h3>Work With Us</h3><p>Consulting, brand partnerships, media production, and sponsored content.</p><div class="arrow" onclick="showPage('work')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Creators</div><h3>Submit a Show</h3><p>Founders, athletes, comedians, and cultural figures — the Onramp is open.</p><div class="arrow" onclick="showPage('submit')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Connect</div><h3>About & Contact</h3><p>Who we are, our relationship with TMI, and how to reach the team.</p><div class="arrow" onclick="showPage('about')" style="cursor:pointer">↗</div></div>
-</div>
-
 <div class="divider"></div>
 <div class="section-label">Featured Series</div>
 <div class="card" style="border-color:var(--red);">
@@ -173,6 +170,30 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <a href="https://youtu.be/5vii99GcUUk" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="margin-top:auto;">Watch on YouTube →</a>
 </div>
 </div>
+<div class="divider"></div>
+<div class="section-label">What is TMM</div>
+<div class="two-col">
+<h2>Not a podcast network. A media infrastructure.</h2>
+<div>
+<p>Texas Movement Media is the content arm of Texas Movement International — producing original series, interviews, and documentary-style programming at the intersection of sport, culture, and systems thinking.</p>
+<p>We don't cover the mainstream. We document what the mainstream ignores: diaspora audits, athletic excellence, performance science, and the founders building alternatives to broken institutions.</p>
+</div>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">6</div><div class="l">Active Verticals</div></div>
+<div class="stat"><div class="n">TMI</div><div class="l">Parent Platform</div></div>
+<div class="stat"><div class="n">TX</div><div class="l">Built in Texas</div></div>
+</div>
+<div class="divider"></div>
+<div class="section-label">How to use this site</div>
+<div class="grid">
+<div class="card"><div class="tag">New here?</div><h3>Start Here</h3><p>The five episodes that explain TMM faster than anything else. Begin here.</p><div class="arrow" onclick="showPage('start')" style="cursor:pointer">↗</div></div>
+<div class="card"><div class="tag">Browse</div><h3>Watch All Series</h3><p>Shame of Emperors, Pro Talks, HERO, Consulting, and more — all in one place.</p><div class="arrow" onclick="showPage('watch')" style="cursor:pointer">↗</div></div>
+<div class="card"><div class="tag">Collaborate</div><h3>Work With Us</h3><p>Consulting, brand partnerships, media production, and sponsored content.</p><div class="arrow" onclick="showPage('work')" style="cursor:pointer">↗</div></div>
+<div class="card"><div class="tag">Creators</div><h3>Submit a Show</h3><p>Founders, athletes, comedians, and cultural figures — the Onramp is open.</p><div class="arrow" onclick="showPage('submit')" style="cursor:pointer">↗</div></div>
+<div class="card"><div class="tag">Connect</div><h3>About & Contact</h3><p>Who we are, our relationship with TMI, and how to reach the team.</p><div class="arrow" onclick="showPage('about')" style="cursor:pointer">↗</div></div>
+</div>
+
 </section>
 
 <section id="start" class="page">
