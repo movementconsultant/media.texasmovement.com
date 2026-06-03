@@ -22,7 +22,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.92);backdrop-filt
 .logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px}
 .logo span{color:var(--red)}
 .nav-links{display:flex;gap:6px;flex-wrap:wrap}
-.nav-links button{background:none;border:none;color:var(--mute);font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:8px 12px;cursor:pointer;border-radius:4px}
+.nav-links button{background:none;border:none;color:var(--mute);font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:700;padding:8px 12px;cursor:pointer;transition:color .2s}
 .nav-links button:hover{color:var(--ink)}
 .nav-links button.active{color:var(--ink);background:var(--surface2)}
 .page{display:none;padding:40px 0;animation:fade .3s ease}
@@ -32,9 +32,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(11,12,14,.92);backdrop-filt
 .hero h1 .r{color:var(--red)}
 .hero .lead{font-size:clamp(16px,2.4vw,21px);max-width:680px;margin-top:20px;color:#cfd3da}
 .btn-group{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px}
-.btn-primary{background:var(--red);color:#fff;border:1px solid var(--red);padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;display:inline-block}
+.btn-primary{background:var(--red);color:#fff;border:1px solid var(--red);padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:filter .2s}
 .btn-primary:hover{filter:brightness(1.08)}
-.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line);padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;display:inline-block}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line);padding:14px 26px;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:4px;cursor:pointer;transition:border-color .2s}
 .btn-secondary:hover{border-color:var(--ink)}
 .divider{height:1px;background:var(--line);margin:36px 0}
 .section-label{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:28px}
@@ -142,7 +142,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="card" style="border-color:var(--red);">
 <div class="tag">Flagship Series</div>
 <h2 style="margin-top:8px;">Shame of Emperors</h2>
-<p>TMM's flagship series — a raw, secular audit of the first-generation diaspora, exposing the structural double standards, weaponized piety, and unaddressed trauma passed from generation to generation. Start with Episode 1.</p>
+<p>TMM's flagship series — a raw, secular audit of the first-generation diaspora, exposing the structural double standards, weaponized piety, and unaddressed trauma passed from generation to generation.</p>
 <div class="btn-group" style="margin-top:16px;">
 <a class="btn-primary" href="https://www.youtube.com/playlist?list=PLfuA6emw6UmzTXWCqT2PDfU2r8285TBY8" target="_blank" rel="noopener noreferrer">Watch Now</a>
 </div>
@@ -152,19 +152,19 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="section-label">Latest from Texas Movement Media</div>
 <div class="grid">
 <div class="card">
-<a href="https://youtu.be/kiZIpGgUgyc" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/kiZIpGgUgyc/hqdefault.jpg" alt="Shame of Emperors 4 - Stages of Grief" style="width:100%;border-radius:4px;border:1px solid var(--line);" /></a>
+<a href="https://youtu.be/kiZIpGgUgyc" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/kiZIpGgUgyc/hqdefault.jpg" alt="Shame of Emperors 4 - Stages of Grief" style="width:100%;height:auto;"></a>
 <h3 style="margin-top:14px;">Shame of Emperors 4 - Stages of Grief</h3>
 <p>Maps the five stages of grief onto the experience of leaving abusive families and institutions that pose as caretakers — denial, anger, bargaining, depression, and acceptance.</p>
 <a href="https://youtu.be/kiZIpGgUgyc" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="margin-top:auto;">Watch on YouTube →</a>
 </div>
 <div class="card">
-<a href="https://youtu.be/kWRFkP7R0JA" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/kWRFkP7R0JA/hqdefault.jpg" alt="Shame of Emperors 3 - Vindictive Ministry" style="width:100%;border-radius:4px;border:1px solid var(--line);" /></a>
+<a href="https://youtu.be/kWRFkP7R0JA" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/kWRFkP7R0JA/hqdefault.jpg" alt="Shame of Emperors 3 - Vindictive Ministry" style="width:100%;height:auto;"></a>
 <h3 style="margin-top:14px;">Shame of Emperors 3 - Vindictive Ministry</h3>
 <p>A secular audit of the structural double standards within the first-generation diaspora, cutting through performative piety to show how spiritual environments get weaponized for discipline and control.</p>
 <a href="https://youtu.be/kWRFkP7R0JA" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="margin-top:auto;">Watch on YouTube →</a>
 </div>
 <div class="card">
-<a href="https://youtu.be/5vii99GcUUk" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/5vii99GcUUk/hqdefault.jpg" alt="Shame of Emperors 2 - Kerala Death Rattle" style="width:100%;border-radius:4px;border:1px solid var(--line);" /></a>
+<a href="https://youtu.be/5vii99GcUUk" target="_blank" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/5vii99GcUUk/hqdefault.jpg" alt="Shame of Emperors 2 - Kerala Death Rattle" style="width:100%;height:auto;"></a>
 <h3 style="margin-top:14px;">Shame of Emperors 2 - Kerala Death Rattle</h3>
 <p>A forensic audit of the Kerala American Malayalee diaspora, exposing the systemic contradictions, unaddressed trauma, and jurisdictional double standards facing first-generation families.</p>
 <a href="https://youtu.be/5vii99GcUUk" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="margin-top:auto;">Watch on YouTube →</a>
@@ -187,11 +187,11 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="divider"></div>
 <div class="section-label">How to use this site</div>
 <div class="grid">
-<div class="card"><div class="tag">New here?</div><h3>Start Here</h3><p>The five episodes that explain TMM faster than anything else. Begin here.</p><div class="arrow" onclick="showPage('start')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Browse</div><h3>Watch All Series</h3><p>Shame of Emperors, Pro Talks, HERO, Consulting, and more — all in one place.</p><div class="arrow" onclick="showPage('watch')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Collaborate</div><h3>Work With Us</h3><p>Consulting, brand partnerships, media production, and sponsored content.</p><div class="arrow" onclick="showPage('work')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Creators</div><h3>Submit a Show</h3><p>Founders, athletes, comedians, and cultural figures — the Onramp is open.</p><div class="arrow" onclick="showPage('submit')" style="cursor:pointer">↗</div></div>
-<div class="card"><div class="tag">Connect</div><h3>About & Contact</h3><p>Who we are, our relationship with TMI, and how to reach the team.</p><div class="arrow" onclick="showPage('about')" style="cursor:pointer">↗</div></div>
+<div class="card"><div class="tag">New here?</div><h3>Start Here</h3><p>The five episodes that explain TMM faster than anything else. Begin here.</p><div class="arrow" onclick="showPage('start')" style="cursor:pointer;"></div></div>
+<div class="card"><div class="tag">Browse</div><h3>Watch All Series</h3><p>Shame of Emperors, Pro Talks, HERO, Consulting, and more — all in one place.</p><div class="arrow" onclick="showPage('watch')" style="cursor:pointer;"></div></div>
+<div class="card"><div class="tag">Collaborate</div><h3>Work With Us</h3><p>Consulting, brand partnerships, media production, and sponsored content.</p><div class="arrow" onclick="showPage('work')" style="cursor:pointer;"></div></div>
+<div class="card"><div class="tag">Creators</div><h3>Submit a Show</h3><p>Founders, athletes, comedians, and cultural figures — the Onramp is open.</p><div class="arrow" onclick="showPage('submit')" style="cursor:pointer;"></div></div>
+<div class="card"><div class="tag">Connect</div><h3>About & Contact</h3><p>Who we are, our relationship with TMI, and how to reach the team.</p><div class="arrow" onclick="showPage('about')" style="cursor:pointer;"></div></div>
 </div>
 
 
@@ -245,7 +245,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
       <div class="card">
         <div class="tag">Featured Steward</div>
         <h3>Alexander Mathai</h3>
-        <p>Alexander Mathai is the current lead steward and host of Texas Movement Media, and the Founder &amp; President of Texas Movement International. He sets the early voice and direction of the platform while building it as a system that can hold many hosts and creators over time. TMM is designed as media infrastructure — not a single personality — so new stewards can step in and carry their own series under the same engine.</p>
+        <p>Alexander Mathai is the current lead steward and host of Texas Movement Media, and the Founder &amp; President of Texas Movement International. He sets the early voice and direction of the platform.</p>
         <div class="card-links">
           <a href="https://www.linkedin.com/in/alexandermathai/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
           <a href="https://www.instagram.com/AlexanderofNazareth/" target="_blank" rel="noopener noreferrer">Instagram — @AlexanderofNazareth →</a>
@@ -258,15 +258,15 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <section id="start" class="page">
 <div class="eyebrow">Start Here</div>
 <h1 style="font-size:clamp(40px,7vw,72px);margin-top:8px">Five episodes. Then you get it.</h1>
-<p class="lead">New to Texas Movement Media? Here’s the fast map of the site — the lanes to watch and the quickest ways to work with us or pitch a show.</p>
+<p class="lead">New to Texas Movement Media? Here's the fast map of the site — the lanes to watch and the quickest ways to work with us or pitch a show.</p>
 <div class="divider"></div>
 <div class="grid">
-<div class="card"><div class="tag">Watch</div><h3>Shame of Emperors</h3><p>Start with our latest diaspora audit and systems breakdown.</p><a href="https://youtu.be/5u33Y2hljYY?si=rTLp8c0ESlRD1hF6" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Watch the breakdown →</a></div>
-<div class="card"><div class="tag">Watch</div><h3>Pro Talks</h3><p>Long-form interviews with founders, athletes, and operators.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyS5XGjS_MHPkYX01JgrMZc" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Explore Pro Talks →</a></div>
-<div class="card"><div class="tag">Watch</div><h3>HERO / Performance</h3><p>The science of athletic excellence, training, and recovery.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmymBV7YbPmP9kBVdjonTguo" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">See HERO content →</a></div>
-<div class="card"><div class="tag">Work</div><h3>Consulting / B2B</h3><p>See how we work with organizations — watch the lane or get in touch.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmzV68aSCeHsHku1-AOE8ga1" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Watch the lane →</a><a href="#" onclick="showPage('work');return false" style="color:var(--red);font-weight:700;margin-top:6px;display:inline-block">Work With Us →</a></div>
-<div class="card"><div class="tag">Pitch</div><h3>Submit a Show</h3><p>Thinking about hosting a show? Founders, athletes, and creators welcome.</p><a href="#" onclick="showPage('submit');return false" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Submit a Show →</a></div>
-<div class="card"><div class="tag">Browse</div><h3>All Series</h3><p>Jump into the full Watch hub and pick any lane.</p><a href="#" onclick="showPage('watch');return false" style="color:var(--red);font-weight:700;margin-top:14px;display:inline-block">Open the Watch hub →</a></div>
+<div class="card"><div class="tag">Watch</div><h3>Shame of Emperors</h3><p>Start with our latest diaspora audit and systems breakdown.</p><a href="https://youtu.be/5u33Y2hljYY?si=rTLp8c0ESlRD1hF6" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;">Watch Now →</a></div>
+<div class="card"><div class="tag">Watch</div><h3>Pro Talks</h3><p>Long-form interviews with founders, athletes, and operators.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyS5XGjS_MHPkYX01JgrMZc" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;">Watch Now →</a></div>
+<div class="card"><div class="tag">Watch</div><h3>HERO / Performance</h3><p>The science of athletic excellence, training, and recovery.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmyTx4snHyEZ9k7DLGJxpHNy" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;">Watch Now →</a></div>
+<div class="card"><div class="tag">Work</div><h3>Consulting / B2B</h3><p>See how we work with organizations — watch the lane or get in touch.</p><a href="https://www.youtube.com/playlist?list=PLfuA6emw6UmzV68aSCeHsHku1-AOE8ga1" target="_blank" rel="noopener noreferrer" style="color:var(--red);font-weight:700;">Watch Now →</a></div>
+<div class="card"><div class="tag">Pitch</div><h3>Submit a Show</h3><p>Thinking about hosting a show? Founders, athletes, and creators welcome.</p><a href="#" onclick="showPage('submit');return false" style="color:var(--red);font-weight:700;">Apply Now →</a></div>
+<div class="card"><div class="tag">Browse</div><h3>All Series</h3><p>Jump into the full Watch hub and pick any lane.</p><a href="#" onclick="showPage('watch');return false" style="color:var(--red);font-weight:700;">Browse All →</a></div>
 </div>
 <div class="btn-group">
 <button class="btn-primary" onclick="showPage('watch')">Browse All Series</button>
@@ -344,7 +344,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
       <div class="series-row">
         <div class="num">08</div>
         <div>
-          <h3>Heaven’s Gates</h3>
+          <h3>Heaven's Gates</h3>
           <p>Spiritually themed storytelling exploring faith, judgment, and meaning.</p>
         </div>
         <a class="btn-secondary" href="https://www.youtube.com/playlist?list=PLfuA6emw6Umy0RWtl4t_WD27lj0oNnGUF" target="_blank" rel="noopener noreferrer">View Playlist →</a>
@@ -366,11 +366,11 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <p class="lead">TMM works with brands, founders, and organizations who want content that actually moves culture.</p>
 <div class="divider"></div>
 <div class="grid">
-<div class="card"><div class="tag">Advisory</div><h3>Consulting</h3><p>Systems and media strategy for organizations navigating change.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">consulting.texasmovement.com →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-consulting/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Consulting →</a></div></div>
-<div class="card"><div class="tag">Studio</div><h3>Media Production</h3><p>Original series, interviews, and documentary-style programming.</p><div class="card-links"><a href="https://www.tiktok.com/@alexandervmathai" target="_blank" rel="noopener noreferrer">TikTok – @AlexanderVMathai →</a><a href="https://www.tiktok.com/@herofootwear" target="_blank" rel="noopener noreferrer">TikTok – @HEROfootwear →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-media/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Media →</a><a href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener noreferrer">YouTube – Texas Movement Media →</a></div></div>
-<div class="card"><div class="tag">Partnerships</div><h3>Brand Partnerships</h3><p>Aligned brands integrated authentically across our verticals.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">consulting.texasmovement.com →</a><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-consulting/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Consulting →</a></div></div>
-<div class="card"><div class="tag">Sponsorship</div><h3>Sponsored Content</h3><p>Purpose-built sponsored segments that respect the audience.</p><div class="card-links"><!-- TODO: confirm LinkedIn URL --><a href="https://www.linkedin.com/company/texas-movement-media/" target="_blank" rel="noopener noreferrer">LinkedIn – Texas Movement Media →</a></div></div>
-<div class="card"><div class="tag">Live</div><h3>Speaking / Hosting</h3><p>Hosting, speaking, and collaboration across events and platforms.</p><div class="card-links"><a href="https://www.tiktok.com/@alexandervmathai" target="_blank" rel="noopener noreferrer">Live / Broadcasts – TikTok @AlexanderVMathai →</a></div></div>
+<div class="card"><div class="tag">Advisory</div><h3>Consulting</h3><p>Systems and media strategy for organizations navigating change.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">Learn More →</a></div></div>
+<div class="card"><div class="tag">Studio</div><h3>Media Production</h3><p>Original series, interviews, and documentary-style programming.</p><div class="card-links"><a href="https://www.tiktok.com/@AlexanderVMathai" target="_blank" rel="noopener noreferrer">View Work →</a></div></div>
+<div class="card"><div class="tag">Partnerships</div><h3>Brand Partnerships</h3><p>Aligned brands integrated authentically across our verticals.</p><div class="card-links"><a href="https://consulting.texasmovement.com" target="_blank" rel="noopener noreferrer">Let's Talk →</a></div></div>
+<div class="card"><div class="tag">Sponsorship</div><h3>Sponsored Content</h3><p>Purpose-built sponsored segments that respect the audience.</p><div class="card-links"><a href="mailto:TexasMovementMedia@gmail.com">Inquire →</a></div></div>
+<div class="card"><div class="tag">Live</div><h3>Speaking / Hosting</h3><p>Hosting, speaking, and collaboration across events and platforms.</p><div class="card-links"><a href="https://www.tiktok.com/@AlexanderVMathai" target="_blank" rel="noopener noreferrer">Get In Touch →</a></div></div>
 </div>
 <div class="btn-group">
 <button class="btn-primary" onclick="showPage('about')">Get In Touch</button>
@@ -409,12 +409,15 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--mute);font-si
 <div class="field"><label for="f-format">Format / Cadence</label><input id="f-format" name="format" type="text" placeholder="Weekly interview, short docs..." /></div>
 <div class="field"><label for="f-lane">Lane / Category</label>
 <select id="f-lane" name="lane">
-<option value="Shame of Emperors">Shame of Emperors</option>
-<option value="Pro Talks">Pro Talks</option>
-<option value="HERO / Performance">HERO / Performance</option>
-<option value="Consulting / B2B">Consulting / B2B</option>
-<option value="TMM Onramp">TMM Onramp</option>
-<option value="Shorts / Clips">Shorts / Clips</option>
+<option value="">Select a lane</option>
+<option value="faith_diaspora">Faith &amp; Diaspora Systems</option>
+<option value="performance_movement">Performance &amp; Movement</option>
+<option value="culture_storytelling">Culture &amp; Storytelling</option>
+<option value="business_systems_work">Business, Systems &amp; Work</option>
+<option value="youth_emerging">Youth &amp; Emerging Voices</option>
+<option value="community_civic">Community &amp; Civic Life</option>
+<option value="experimental">Experimental &amp; Format Tests</option>
+<option value="other">Other / Not Sure Yet</option>
 </select>
 </div>
 <div class="field full"><label for="f-pitch">Pitch</label><textarea id="f-pitch" name="pitch" placeholder="Tell us about the show — the angle, the audience, why now."></textarea></div>
