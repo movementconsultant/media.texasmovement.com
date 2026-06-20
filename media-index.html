@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texas Movement Media — Underreported Stories, Economic Leverage</title>
+<meta name="description" content="The content arm of Texas Movement International — turning underreported sports and founder stories into economic leverage for athletes, brands, and cities. Pro Talks, productions, and shorts.">
+<meta property="og:title" content="Texas Movement Media">
+<meta property="og:description" content="Underreported stories, turned into economic leverage. Pro Talks, cinematic productions, and shorts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://media.texasmovement.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#E7E8E2;--panel:#DDDED7;--ink:#15181E;--ink-soft:#454A54;--line:#C4C6BD;--line-strong:#A6A99F;--white:#F4F5F0;--compression:#274A78;--tension:#BD3B22;--tick:#3E7FA4;--wrap:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.section{padding:96px 0;position:relative}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--tension);flex:none}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;line-height:1.04;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
+p{color:var(--ink-soft)}p strong{color:var(--ink);font-weight:600}
+.topbar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(231,232,226,.86);backdrop-filter:blur(8px);z-index:50}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.95rem;text-decoration:none}
+.back{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.06em;color:var(--ink-soft);text-decoration:none}.back:hover{color:var(--ink)}
+.hero{padding:84px 0 72px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;margin:8px 0 24px}
+.hero .lede{font-size:1.12rem;max-width:31em;margin-bottom:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{font-family:"IBM Plex Mono",monospace;font-size:.82rem;letter-spacing:.04em;text-decoration:none;padding:15px 26px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:10px;transition:.18s ease;background:var(--ink);color:var(--white)}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn--ghost{background:transparent;color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:var(--white)}
+.btn .arrow{transition:transform .18s ease}.btn:hover .arrow{transform:translateX(3px)}
+.figure{width:100%;aspect-ratio:1.1/1}
+.fig{width:100%;height:100%;display:block}
+@keyframes eq{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
+.fig .bar{transform-origin:center bottom;animation:eq 1.1s ease-in-out infinite}
+.fig-caption{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;margin-top:6px;text-align:right}
+.section--panel{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.card{border:1px solid var(--line-strong);background:var(--paper);padding:30px 26px}
+.card .n{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;color:var(--tension);margin-bottom:14px}
+.card h3{font-size:1.15rem;margin-bottom:10px}.card p{font-size:.94rem}
+.channels{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--line-strong);margin-top:42px}
+.ch{padding:26px 30px;border-bottom:1px solid var(--line-strong);border-right:1px solid var(--line-strong);text-decoration:none;transition:background .15s ease;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.ch:nth-child(2n){border-right:none}
+.ch:hover{background:var(--panel)}
+.ch .name{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:1.05rem}
+.ch .meta{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;margin-top:3px}
+.ch .go{font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--compression)}
+.host{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.host p{font-size:1.05rem;margin-bottom:16px}
+.criteria{border:1px solid var(--ink);box-shadow:6px 6px 0 var(--ink);background:var(--paper);padding:30px 28px}
+.criteria .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tension);margin-bottom:16px}
+.criteria li{list-style:none;padding:12px 0;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink)}
+.foot{background:var(--ink);color:var(--paper);padding:84px 0 40px}
+.foot h2{color:var(--white)}.foot .eyebrow{color:#9aa0ab}.foot .eyebrow::before{background:var(--tension)}
+.connect{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:38px 0 56px}
+.connect a{text-decoration:none;border-top:1px solid #2c313b;padding-top:16px;display:block}
+.connect .k{font-family:"IBM Plex Mono",monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#8a909b;margin-bottom:6px}
+.connect .v{font-family:"Space Grotesk",sans-serif;font-size:1.05rem;color:var(--white)}
+.connect a:hover .v{color:#cdd2da}
+.foot .legal{border-top:1px solid #2c313b;padding-top:24px;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.05em;color:#8a909b;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:30px}.figure{max-width:380px;order:-1}.grid3{grid-template-columns:1fr}.channels{grid-template-columns:1fr}.ch{border-right:none}.host{grid-template-columns:1fr}.connect{grid-template-columns:1fr}.section{padding:68px 0}}
+@media(prefers-reduced-motion:reduce){.fig .bar{animation:none;transform:scaleY(.7)}}
+:focus-visible{outline:2px solid var(--compression);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="topbar"><div class="wrap">
+  <a class="brand" href="https://texasmovement.com">Texas Movement Media</a>
+  <a class="back mono" href="https://texasmovement.com">← TEXAS MOVEMENT INTERNATIONAL</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">TMM // Content × Economic Leverage</div>
+    <h1>Underreported stories, turned into leverage.</h1>
+    <p class="lede">The content arm of TMI. We turn underreported sports and founder stories into economic leverage for the athletes, brands, and cities they're about — from Pro Talks interviews to cinematic productions and shorts. Stories that move markets, not just feeds.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://www.youtube.com/@TexasMovementMedia">Watch on YouTube <span class="arrow">→</span></a>
+      <a class="btn btn--ghost" href="#host">Become a host</a>
+    </div>
+  </div>
+  <div><div class="figure">
+    <!-- SIGNATURE: a framed shot + waveform — capture meets broadcast -->
+    <svg class="fig" viewBox="0 0 360 320" role="img" aria-label="A camera frame containing an audio waveform.">
+      <g class="frame">
+        <!-- corner frame marks -->
+        <g stroke="var(--ink)" stroke-width="2" fill="none">
+          <path d="M40 50 h22 M40 50 v22"/><path d="M320 50 h-22 M320 50 v22"/>
+          <path d="M40 270 h22 M40 270 v-22"/><path d="M320 270 h-22 M320 270 v-22"/>
+        </g>
+        <!-- record dot -->
+        <circle cx="56" cy="40" r="5" fill="var(--tension)"/>
+        <text x="68" y="44" class="mono" font-size="9" fill="var(--ink-soft)">REC</text>
+        <!-- waveform bars -->
+        <g fill="var(--compression)">
+          <rect class="bar" x="90"  y="120" width="8" height="80" style="animation-delay:0s"/>
+          <rect class="bar" x="110" y="120" width="8" height="80" style="animation-delay:.15s"/>
+          <rect class="bar" x="130" y="120" width="8" height="80" style="animation-delay:.3s"/>
+          <rect class="bar" x="150" y="120" width="8" height="80" style="animation-delay:.5s"/>
+        </g>
+        <g fill="var(--tension)">
+          <rect class="bar" x="172" y="120" width="8" height="80" style="animation-delay:.65s"/>
+          <rect class="bar" x="192" y="120" width="8" height="80" style="animation-delay:.4s"/>
+        </g>
+        <g fill="var(--compression)">
+          <rect class="bar" x="214" y="120" width="8" height="80" style="animation-delay:.25s"/>
+          <rect class="bar" x="234" y="120" width="8" height="80" style="animation-delay:.55s"/>
+          <rect class="bar" x="254" y="120" width="8" height="80" style="animation-delay:.1s"/>
+          <rect class="bar" x="274" y="120" width="8" height="80" style="animation-delay:.35s"/>
+        </g>
+        <text x="180" y="248" text-anchor="middle" class="mono" font-size="9" fill="var(--ink-soft)">PRO TALKS · 4K · TMM</text>
+      </g>
+    </svg>
+    <div class="fig-caption">FIG. 05 — CAPTURE THE STORY, BROADCAST THE LEVERAGE</div>
+  </div></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="eyebrow">TMM // 01 — What We Make</div>
+  <h2>Three formats. One thesis.</h2>
+  <p style="max-width:42em">Better athletes generate better stories; better stories create better markets. Every format TMM produces is built to compound — content that earns attention and converts it into real economic leverage for the people in frame.</p>
+  <div class="grid3">
+    <div class="card"><div class="n">FORMAT — A</div><h3>Pro Talks</h3><p>Long-form athlete and founder interviews that get past the highlight reel to the system underneath the performance.</p></div>
+    <div class="card"><div class="n">FORMAT — B</div><h3>Productions</h3><p>Cinematic, documentary-style features on movements, markets, and the people building them — made to last.</p></div>
+    <div class="card"><div class="n">FORMAT — C</div><h3>Shorts</h3><p>Sharp, fast comedy and feature shorts engineered for reach — the top of the funnel for everything else.</p></div>
+  </div>
+</div></section>
+
+<section class="section section--panel"><div class="wrap">
+  <div class="eyebrow">TMM // 02 — The Network</div>
+  <h2>Follow the channels.</h2>
+  <p style="max-width:42em">The official Texas Movement broadcast network — the best way to follow productions, performance science, and founder stories in real time.</p>
+  <div class="channels">
+    <a class="ch" href="https://www.youtube.com/@TexasMovementMedia">
+      <span><span class="name">@TexasMovementMedia</span><span class="meta">YouTube · Pro Talks &amp; productions</span></span><span class="go">→</span>
+    </a>
+    <a class="ch" href="https://www.youtube.com/@HEROFootwear">
+      <span><span class="name">@HEROFootwear</span><span class="meta">YouTube · Product &amp; performance</span></span><span class="go">→</span>
+    </a>
+    <a class="ch" href="https://www.youtube.com/@TexasMovementPerformance">
+      <span><span class="name">@TexasMovementPerformance</span><span class="meta">YouTube · Biomechanics &amp; protocols</span></span><span class="go">→</span>
+    </a>
+    <a class="ch" href="https://www.instagram.com/alexanderofnazareth/">
+      <span><span class="name">@AlexanderofNazareth</span><span class="meta">Instagram · Founder's perspective</span></span><span class="go">→</span>
+    </a>
+  </div>
+</div></section>
+
+<section id="host" class="section"><div class="wrap">
+  <div class="eyebrow">TMM // 03 — Step Into the Network</div>
+  <div class="host">
+    <div>
+      <h2>A role, not a collab.</h2>
+      <p>As TMM grows across media, performance, and city-scale work, we're selectively opening the door to future hosts and on-air talent who want to carry specific shows, verticals, or markets forward. This is a long-term creative and operational role inside a system built to last.</p>
+      <p>To apply: send a short intro, links to work you've already produced, and the show or vertical you'd want to host or build.</p>
+      <a class="btn" href="mailto:texasmovementmedia@gmail.com?subject=Host%20Application%3A%20%5BYour%20Name%20%2F%20Market%5D">Apply to host <span class="arrow">→</span></a>
+    </div>
+    <aside class="criteria">
+      <div class="k">We're looking for —</div>
+      <ul style="list-style:none">
+        <li>Documented on-camera reps you can point to</li>
+        <li>Real depth in sports, founder economics, city development, or ceremony</li>
+        <li>Systems thinking — a body of work, not clips</li>
+        <li>Calm, credible, economics-first, unsupervised</li>
+        <li>Based in or connected to a TMI market</li>
+      </ul>
+    </aside>
+  </div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div class="eyebrow">TMM // Connect</div>
+  <h2>Bring us the story.</h2>
+  <div class="connect">
+    <a href="mailto:texasmovementmedia@gmail.com"><div class="k">Email</div><div class="v">texasmovementmedia@gmail.com</div></a>
+    <a href="https://www.youtube.com/@TexasMovementMedia"><div class="k">YouTube</div><div class="v">@TexasMovementMedia</div></a>
+    <a href="https://texasmovement.com"><div class="k">Network</div><div class="v">texasmovement.com</div></a>
+  </div>
+  <div class="legal">
+    <span>© Texas Movement Media — Part of Texas Movement International</span>
+    <span>STORIES THAT MOVE MARKETS</span>
+  </div>
+</div></footer>
+
+</body>
+</html>
