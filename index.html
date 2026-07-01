@@ -1,550 +1,641 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Texas Movement Media — Underreported Stories, Economic Leverage</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texas Movement Media — Document the work. Build durable signal.</title>
+    <meta
+      name="description"
+      content="Texas Movement Media is the signal layer of Texas Movement. Documentation, content systems, and deliberate distribution so good work has a record and a story."
+    />
+    <link rel="canonical" href="https://media.texasmovement.com" />
 
-  <!-- Primary description -->
-  <meta name="description" content="The content arm of Texas Movement International. Texas Movement Media turns underreported sports and founder stories into economic leverage for the athletes, brands, and cities they’re about.">
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Texas Movement Media — Document the work. Build durable signal."
+    />
+    <meta
+      property="og:description"
+      content="Media systems that explain what Texas Movement does, record the process, and distribute it deliberately—signal over volume."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://media.texasmovement.com" />
+    <meta property="og:image" content="/og-texas-movement-media.png" />
+    <meta property="og:site_name" content="Texas Movement Media" />
 
-  <!-- Theme color -->
-  <meta name="theme-color" content="#15181E">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Texas Movement Media — Document the work. Build durable signal."
+    />
+    <meta
+      name="twitter:description"
+      content="Documentation, content systems, series, and distribution across channels for Texas Movement and selected partners."
+    />
+    <meta name="twitter:image" content="/og-texas-movement-media.png" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Texas Movement Media">
-  <meta property="og:title" content="Texas Movement Media — Underreported Stories, Economic Leverage">
-  <meta property="og:description" content="Pro Talks, productions, and shorts that move markets, not just feeds. The content arm of Texas Movement International.">
-  <meta property="og:url" content="https://media.texasmovement.com">
-  <meta property="og:image" content="https://media.texasmovement.com/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:alt" content="Texas Movement Media by Texas Movement International — underreported stories, economic leverage.">
+    <!-- JSON-LD (signal layer + YouTube channel) [file:153][web:174] -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://media.texasmovement.com#org",
+        "name": "Texas Movement Media",
+        "url": "https://media.texasmovement.com",
+        "parentOrganization": {
+          "@type": "Organization",
+          "@id": "https://texasmovement.com#org",
+          "name": "Texas Movement International"
+        },
+        "founder": {
+          "@type": "Person",
+          "@id": "https://alexandermathai.com/person",
+          "name": "Alexander Mathai"
+        },
+        "sameAs": [
+          "https://texasmovement.com",
+          "https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://media.texasmovement.com#website",
+        "url": "https://media.texasmovement.com",
+        "name": "Texas Movement Media",
+        "publisher": {
+          "@id": "https://media.texasmovement.com#org"
+        }
+      }
+    </script>
+    <!-- You can extend this with Article and VideoObject entities referencing specific episodes and series. [file:153] -->
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Texas Movement Media — Underreported Stories, Economic Leverage">
-  <meta name="twitter:description" content="The content arm of TMI turning underreported sports and founder stories into economic leverage for athletes, brands, and cities.">
-  <meta name="twitter:image" content="https://media.texasmovement.com/og-image.png">
-  <meta name="twitter:image:alt" content="Texas Movement Media by Texas Movement International — underreported stories, economic leverage.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #020617;
+        --fg-primary: #e2e8f0;
+        --fg-secondary: #cbd5e1;
+        --fg-muted: #94a3b8;
+        --border-soft: rgba(148, 163, 184, 0.25);
+        --border-card: rgba(148, 163, 184, 0.22);
+        --accent: #38bdf8;
+      }
 
-  <style>
-    :root{
-      --paper:#E7E8E2;
-      --panel:#DDDED7;
-      --ink:#15181E;
-      --ink-soft:#454A54;
-      --line:#C4C6BD;
-      --line-strong:#A6A99F;
-      --white:#F4F5F0;
-      --compression:#274A78;
-      --tension:#BD3B22;
-      --tick:#3E7FA4;
-      --wrap:1180px;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-    body{
-      background:var(--paper);
-      color:var(--ink);
-      font-family:"IBM Plex Sans",system-ui,sans-serif;
-      font-size:17px;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:inherit;text-decoration:none}
-    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-    .section{padding:96px 0;position:relative}
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg-secondary);
+        font-family: "Inter", system-ui, sans-serif;
+        line-height: 1.6;
+      }
 
-    .eyebrow{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.72rem;
-      letter-spacing:.2em;
-      text-transform:uppercase;
-      color:var(--ink-soft);
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:22px;
-    }
-    .eyebrow::before{
-      content:"";
-      width:34px;
-      height:1px;
-      background:var(--tension);
-      flex:none;
-    }
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.25rem 3rem;
+      }
 
-    h1,h2,h3{
-      font-family:"Space Grotesk",sans-serif;
-      font-weight:600;
-      line-height:1.04;
-      letter-spacing:-.01em;
-    }
-    h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin-bottom:18px}
-    p{color:var(--ink-soft)}
-    p strong{color:var(--ink);font-weight:600}
+      .topbar,
+      .hero,
+      .section,
+      .footer {
+        margin-bottom: 2rem;
+      }
 
-    .topbar{
-      border-bottom:1px solid var(--line);
-      position:sticky;
-      top:0;
-      background:rgba(231,232,226,.86);
-      backdrop-filter:blur(8px);
-      z-index:50;
-    }
-    .topbar .wrap{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      height:58px;
-    }
-    .brand{
-      font-family:"Space Grotesk",sans-serif;
-      font-weight:600;
-      font-size:.95rem;
-      text-decoration:none;
-    }
-    .back{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.72rem;
-      letter-spacing:.06em;
-      color:var(--ink-soft);
-      text-decoration:none;
-    }
-    .back:hover{color:var(--ink)}
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        border-bottom: 1px solid var(--border-soft);
+        padding-bottom: 1rem;
+      }
 
-    .hero{
-      padding:84px 0 72px;
-      border-bottom:1px solid var(--line);
-      overflow:hidden;
-    }
-    .hero .wrap{
-      display:grid;
-      grid-template-columns:1.12fr .88fr;
-      gap:54px;
-      align-items:center;
-    }
-    .hero h1{
-      font-size:clamp(2.5rem,5.6vw,4.4rem);
-      font-weight:700;
-      margin:8px 0 24px;
-    }
-    .hero .lede{
-      font-size:1.12rem;
-      max-width:31em;
-      margin-bottom:34px;
-    }
-    .cta-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-    .btn{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.82rem;
-      letter-spacing:.04em;
-      text-decoration:none;
-      padding:15px 26px;
-      border:1px solid var(--ink);
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      transition:.18s ease;
-      background:var(--ink);
-      color:var(--white);
-    }
-    .btn:hover{background:transparent;color:var(--ink)}
-    .btn--ghost{background:transparent;color:var(--ink)}
-    .btn--ghost:hover{background:var(--ink);color:var(--white)}
-    .btn .arrow{transition:transform .18s ease}
-    .btn:hover .arrow{transform:translateX(3px)}
+      .brand {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+      }
 
-    .figure{
-      width:100%;
-      aspect-ratio:1.1/1;
-    }
-    .fig{
-      width:100%;
-      height:100%;
-      display:block;
-    }
-    @keyframes eq{
-      0%,100%{transform:scaleY(.35)}
-      50%{transform:scaleY(1)}
-    }
-    .fig .bar{
-      transform-origin:center bottom;
-      animation:eq 1.1s ease-in-out infinite;
-    }
-    .fig-caption{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.08em;
-      color:var(--ink-soft);
-      text-transform:uppercase;
-      margin-top:6px;
-      text-align:right;
-    }
+      .brand-mark {
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid rgba(148, 163, 184, 0.6);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+      }
 
-    .section--panel{
-      background:var(--panel);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-    .grid3{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:42px;
-    }
-    .card{
-      border:1px solid var(--line-strong);
-      background:var(--paper);
-      padding:30px 26px;
-    }
-    .card .n{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      color:var(--tension);
-      margin-bottom:14px;
-    }
-    .card h3{
-      font-size:1.15rem;
-      margin-bottom:10px;
-    }
-    .card p{
-      font-size:.94rem;
-    }
+      .brand-name {
+        font-weight: 700;
+        color: var(--fg-primary);
+      }
 
-    .channels{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:0;
-      border:1px solid var(--line-strong);
-      margin-top:42px;
-    }
-    .ch{
-      padding:26px 30px;
-      border-bottom:1px solid var(--line-strong);
-      border-right:1px solid var(--line-strong);
-      text-decoration:none;
-      transition:background .15s ease;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-    }
-    .ch:nth-child(2n){border-right:none}
-    .ch:hover{background:var(--panel)}
-    .ch .name{
-      font-family:"Space Grotesk",sans-serif;
-      font-weight:600;
-      font-size:1.05rem;
-    }
-    .ch .meta{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.08em;
-      color:var(--ink-soft);
-      text-transform:uppercase;
-      margin-top:3px;
-    }
-    .ch .go{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.8rem;
-      color:var(--compression);
-    }
+      .brand-subtitle {
+        font-size: 0.9rem;
+        color: var(--fg-muted);
+      }
 
-    .host{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:48px;
-      align-items:start;
-    }
-    .host p{
-      font-size:1.05rem;
-      margin-bottom:16px;
-    }
-    .criteria{
-      border:1px solid var(--ink);
-      box-shadow:6px 6px 0 var(--ink);
-      background:var(--paper);
-      padding:30px 28px;
-    }
-    .criteria .k{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:var(--tension);
-      margin-bottom:16px;
-    }
-    .criteria li{
-      list-style:none;
-      padding:12px 0;
-      border-top:1px solid var(--line);
-      font-size:.92rem;
-      color:var(--ink);
-    }
+      .nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
 
-    .foot{
-      background:var(--ink);
-      color:var(--paper);
-      padding:84px 0 40px;
-    }
-    .foot h2{color:var(--white)}
-    .foot .eyebrow{color:#9aa0ab}
-    .foot .eyebrow::before{background:var(--tension)}
-    .connect{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:24px;
-      margin:38px 0 56px;
-    }
-    .connect a{
-      text-decoration:none;
-      border-top:1px solid #2c313b;
-      padding-top:16px;
-      display:block;
-    }
-    .connect .k{
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.66rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#8a909b;
-      margin-bottom:6px;
-    }
-    .connect .v{
-      font-family:"Space Grotesk",sans-serif;
-      font-size:1.05rem;
-      color:var(--white);
-    }
-    .connect a:hover .v{color:#cdd2da}
-    .foot .legal{
-      border-top:1px solid #2c313b;
-      padding-top:24px;
-      font-family:"IBM Plex Mono",monospace;
-      font-size:.7rem;
-      letter-spacing:.05em;
-      color:#8a909b;
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+      .nav a {
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
 
-    @media(max-width:900px){
-      .hero .wrap{grid-template-columns:1fr;gap:30px}
-      .figure{max-width:380px;order:-1}
-      .grid3{grid-template-columns:1fr}
-      .channels{grid-template-columns:1fr}
-      .ch{border-right:none}
-      .host{grid-template-columns:1fr}
-      .connect{grid-template-columns:1fr}
-      .section{padding:68px 0}
-    }
-    @media(prefers-reduced-motion:reduce){
-      .fig .bar{animation:none;transform:scaleY(.7)}
-      html{scroll-behavior:auto}
-    }
-    :focus-visible{outline:2px solid var(--compression);outline-offset:3px}
-  </style>
-</head>
-<body>
+      .nav a:hover {
+        text-decoration: underline;
+      }
 
-<header class="topbar">
-  <div class="wrap">
-    <a href="https://texasmovement.com" class="brand">Texas Movement Media</a>
-    <a href="https://texasmovement.com" class="back">← Texas Movement International</a>
-  </div>
-</header>
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.9fr);
+        gap: 1.5rem;
+        align-items: start;
+        padding-top: 0.5rem;
+      }
 
-<main>
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <div class="eyebrow">TMM // Content × Economic Leverage</div>
-        <h1>Underreported stories, turned into leverage.</h1>
-        <p class="lede">
-          The content arm of TMI. We turn underreported sports and founder stories into economic leverage for the athletes, brands, and cities they’re about — from Pro Talks interviews to cinematic productions and shorts. Stories that move markets, not just feeds.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener">
-            Watch on YouTube  <span class="arrow">→</span>
-          </a>
-          <a class="btn btn--ghost" href="#host">
-            Become a host <span class="arrow">↓</span>
-          </a>
+      .eyebrow {
+        color: #60a5fa;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+        line-height: 1.05;
+        color: var(--fg-primary);
+        margin: 0 0 0.5rem;
+      }
+
+      .hero-sub {
+        font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+        line-height: 1.1;
+        color: var(--fg-secondary);
+        margin: 0 0 1rem;
+      }
+
+      .hero-body {
+        font-size: 0.98rem;
+        color: var(--fg-secondary);
+        max-width: 60ch;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--fg-muted);
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        margin: 0 0 0.4rem;
+        color: var(--fg-primary);
+        font-size: 0.92rem;
+      }
+
+      .hero-card,
+      .card,
+      .faq-item,
+      .contact {
+        border: 1px solid var(--border-card);
+        border-radius: 1rem;
+        background: rgba(15, 23, 42, 0.55);
+      }
+
+      .hero-card {
+        overflow: hidden;
+      }
+
+      .hero-card-body {
+        padding: 1rem;
+      }
+
+      .hero-card-title {
+        margin: 0 0 0.35rem;
+        color: var(--fg-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.78rem;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+      }
+
+      .button {
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .button.primary {
+        background: var(--accent);
+        color: var(--bg);
+      }
+
+      .button.secondary {
+        border: 1px solid rgba(148, 163, 184, 0.5);
+        color: #e5e7eb;
+      }
+
+      .section {
+        padding-top: 0.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .card,
+      .faq-item {
+        padding: 1rem;
+      }
+
+      .bullets {
+        display: grid;
+        gap: 0.75rem;
+        max-width: 70ch;
+      }
+
+      .faq {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .contact {
+        padding: 1rem;
+      }
+
+      .contact .fineprint {
+        font-size: 0.85rem;
+        color: var(--fg-muted);
+      }
+
+      .footer {
+        border-top: 1px solid var(--border-soft);
+        padding-top: 1rem;
+        color: var(--fg-muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.85rem;
+      }
+
+      .footer-links a {
+        color: var(--fg-secondary);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-separator {
+        color: #64748b;
+      }
+
+      @media (max-width: 800px) {
+        .hero,
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">TM</div>
+          <div class="brand-copy">
+            <div class="brand-name">Texas Movement Media</div>
+            <div class="brand-subtitle">Signal layer · Media</div>
+          </div>
         </div>
-      </div>
+        <nav class="nav">
+          <a href="#overview">Overview</a>
+          <a href="#who">Who it’s for</a>
+          <a href="#how">How it works</a>
+          <a href="#what">What we make</a>
+          <a href="#series">Series & previews</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-      <aside class="figure">
-        <svg class="fig" viewBox="0 0 320 290" role="img" aria-labelledby="tmm-figure-title">
-          <title id="tmm-figure-title">REC · Pro Talks · 4K — Texas Movement Media</title>
-          <rect x="18" y="40" width="284" height="180" rx="18" fill="#15181E" stroke="#C4C6BD" stroke-width="1.4"/>
-          <rect x="34" y="60" width="252" height="140" rx="10" fill="#0D0F14" stroke="#3E7FA4" stroke-width="1"/>
-
-          <rect class="bar" x="70" y="140" width="18" height="46" fill="#BD3B22"/>
-          <rect class="bar" x="104" y="120" width="18" height="66" fill="#274A78"/>
-          <rect class="bar" x="138" y="130" width="18" height="56" fill="#C8A15A"/>
-          <rect class="bar" x="172" y="115" width="18" height="71" fill="#274A78"/>
-          <rect class="bar" x="206" y="135" width="18" height="51" fill="#BD3B22"/>
-
-          <circle cx="46" cy="54" r="4" fill="#BD3B22"/>
-          <circle cx="60" cy="54" r="4" fill="#E0A236"/>
-          <circle cx="74" cy="54" r="4" fill="#4B8CC4"/>
-
-          <text x="224" y="54" font-family="IBM Plex Mono, monospace" font-size="9" fill="#9FA5B0" text-anchor="end">
-            REC · PRO TALKS · 4K · TMM
-          </text>
-        </svg>
-        <div class="fig-caption">FIG. 05 — CAPTURE THE STORY, BROADCAST THE LEVERAGE</div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section section--panel">
-    <div class="wrap">
-      <div class="eyebrow">TMM // 01 — What We Make</div>
-      <h2>Three formats. One thesis.</h2>
-      <p>
-        Better athletes generate better stories; better stories create better markets. Every format TMM produces is built to compound — content that earns attention and converts it into real economic leverage for the people in frame.
-      </p>
-
-      <div class="grid3">
-        <article class="card">
-          <div class="n mono">FORMAT — A</div>
-          <h3>Pro Talks</h3>
-          <p>Long-form athlete and founder interviews that get past the highlight reel to the system underneath the performance.</p>
-        </article>
-
-        <article class="card">
-          <div class="n mono">FORMAT — B</div>
-          <h3>Productions</h3>
-          <p>Cinematic, documentary-style features on movements, markets, and the people building them — made to last.</p>
-        </article>
-
-        <article class="card">
-          <div class="n mono">FORMAT — C</div>
-          <h3>Shorts</h3>
-          <p>Sharp, fast comedy and feature shorts engineered for reach — the top of the funnel for everything else.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="eyebrow">TMM // 02 — The Network</div>
-      <h2>Follow the channels.</h2>
-      <p>
-        The official Texas Movement broadcast network — the best way to follow productions, performance science, and founder stories in real time.
-      </p>
-
-      <div class="channels">
-        <a class="ch" href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener">
-          <div>
-            <div class="name">@TexasMovementMedia</div>
-            <div class="meta">YouTube · Pro Talks &amp; productions</div>
+      <section id="overview" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">DOCUMENTATION · CONTENT SYSTEMS · DISTRIBUTION</p>
+          <h1>Document the work. Build durable signal.</h1>
+          <p class="hero-sub">
+            Media systems that explain what Texas Movement does, record the process, and distribute it deliberately—
+            signal over volume.
+          </p>
+          <p class="hero-body">
+            Texas Movement Media is the signal layer of the ecosystem. It is for the ecosystem’s lanes, collaborators,
+            and press who need the work explained clearly and credibly. It solves the problem of good work that goes
+            undocumented and therefore invisible. It works by documenting first, editing hard, and distributing
+            deliberately to the right channels rather than everywhere at once. It connects to every lane it documents
+            and to Social, where the signal reaches the public. Media here is infrastructure. It exists to make real
+            work legible and durable.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#series">See series & previews</a>
+            <a class="button secondary" href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg" target="_blank" rel="noreferrer">Go to YouTube</a>
           </div>
-          <div class="go">Watch →</div>
-        </a>
+        </div>
 
-        <a class="ch" href="https://www.youtube.com/@HEROFootwear" target="_blank" rel="noopener">
-          <div>
-            <div class="name">@HEROFootwear</div>
-            <div class="meta">YouTube · Product &amp; performance</div>
+        <aside class="hero-card">
+          <div class="hero-card-body">
+            <p class="hero-card-title">What this page is</p>
+            <p>
+              This is the media systems layer. It explains the editorial function, shows what formats exist, and surfaces
+              series previews that you can wire to the latest upload in each series.
+            </p>
           </div>
-          <div class="go">Watch →</div>
-        </a>
+        </aside>
+      </section>
 
-        <a class="ch" href="https://www.youtube.com/@TexasMovementPerformance" target="_blank" rel="noopener">
-          <div>
-            <div class="name">@TexasMovementPerformance</div>
-            <div class="meta">YouTube · Biomechanics &amp; protocols</div>
+      <section id="who" class="section">
+        <h2>Who it’s for</h2>
+        <div class="bullets">
+          <p>
+            The Texas Movement lanes that need their work recorded and explained—Consulting, Performance, HERO, Health,
+            Distribution, and Reparations.
+          </p>
+          <p>
+            Collaborators and partners who want documentation with editorial standards, not content churn.
+          </p>
+          <p>
+            Press and serious audiences who want signal, not noise. It is not a fit for volume-for-volume’s-sake content
+            or hype production.
+          </p>
+        </div>
+      </section>
+
+      <section id="how" class="section">
+        <h2>How it works</h2>
+        <div class="bullets">
+          <p><strong>Document first.</strong> Capture process, decisions, and context before thinking about distribution.</p>
+          <p><strong>Edit hard.</strong> Shape material into formats that are clear, credible, and worth re-watching or re-reading.</p>
+          <p><strong>Distribute deliberately.</strong> Send signal to the channels that matter, not everywhere at once.</p>
+          <p><strong>Signal over volume.</strong> Fewer, better pieces that hold up over time beat constant output.</p>
+        </div>
+      </section>
+
+      <section id="what" class="section">
+        <h2>What we make</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Documentation</h3>
+            <p>
+              Capture the process and decisions behind the work across lanes so there is a record that holds up and a
+              story worth distributing.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Content systems</h3>
+            <p>
+              Repeatable formats and pipelines that produce consistent, credible output for the ecosystem and select
+              partners.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Distribution</h3>
+            <p>
+              Deliberate distribution to the channels that matter—YouTube, Social, and other surfaces—so signal reaches
+              the right people.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Production support</h3>
+            <p>
+              Editorial and production help for founder- and brand-facing content, grounded in the same discipline that
+              runs inside the ecosystem.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="series" class="section">
+        <h2>Series & previews</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>ProTalks</h3>
+            <p>
+              Conversations with athletes and operators about movement, performance, and systems—documented with the
+              same discipline used inside Texas Movement.
+            </p>
+            <p>
+              Latest episode:
+              <a
+                href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch the most recent ProTalks upload →
+              </a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Systems & Signal</h3>
+            <p>
+              Deep dives on how Texas Movement lanes operate—Consulting, Performance, HERO, Health, Distribution—
+              structured so serious people can reason with them.
+            </p>
+            <p>
+              Latest episode:
+              <a
+                href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch the latest Systems & Signal episode →
+              </a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Field notes</h3>
+            <p>
+              Short, focused pieces from real work—training sessions, product runs, recovery systems—captured and
+              edited for clarity.
+            </p>
+            <p>
+              Latest episode:
+              <a
+                href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch the latest Field notes piece →
+              </a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>Signals for partners</h3>
+            <p>
+              Select partner-facing episodes and pieces that document joint work with the same editorial standards as
+              internal lanes.
+            </p>
+            <p>
+              Latest episode:
+              <a
+                href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Watch the latest partner signal →
+              </a>
+            </p>
+          </article>
+        </div>
+        <p class="hero-body" style="margin-top:1rem;">
+          In implementation, each “latest episode” link can be wired directly to the most recent upload URL per series,
+          based on publish date, so previews always point to the newest piece in that lane.
+        </p>
+      </section>
+
+      <section id="ecosystem" class="section">
+        <h2>Ecosystem connections</h2>
+        <div class="bullets">
+          <p>
+            Media documents every lane—Consulting, Distribution, Performance, HERO, Health, Reparations, and FounderLink
+            where useful.
+          </p>
+          <p>
+            It connects directly to Social, where much of the signal shows up publicly and where Gather events live.
+          </p>
+          <p>
+            It routes back to the hub at
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TexasMovement.com</a>, so people can
+            move from signal to structure.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <h3>What is Texas Movement Media?</h3>
+            <p>
+              It is the signal layer—it documents the work, produces content systems, and distributes them with editorial
+              discipline.
+            </p>
           </div>
-          <div class="go">Watch →</div>
-        </a>
-
-        <a class="ch" href="https://www.instagram.com/alexanderofnazareth/" target="_blank" rel="noopener">
-          <div>
-            <div class="name">@AlexanderofNazareth</div>
-            <div class="meta">Instagram · Founder’s perspective</div>
+          <div class="faq-item">
+            <h3>Is this a marketing agency?</h3>
+            <p>
+              No. It is an in-ecosystem media function focused on durable signal and documentation, not campaign churn.
+            </p>
           </div>
-          <div class="go">Follow →</div>
-        </a>
-      </div>
-    </div>
-  </section>
+          <div class="faq-item">
+            <h3>What does it cover?</h3>
+            <p>
+              Every lane. Media explains and records what Consulting, Performance, HERO, Health, and the rest actually
+              do.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Can outside partners commission work?</h3>
+            <p>
+              When there is a fit. Send a note with scope and what the content needs to accomplish; fit and alignment
+              are assessed first.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How does it connect to Social?</h3>
+            <p>
+              Media produces the signal; Social is where much of it shows up publicly and where Gather events run.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How are series previews kept current?</h3>
+            <p>
+              Each series card is meant to link to the latest upload by publish date for that series, so the preview
+              always points to the newest work.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <section id="host" class="section">
-    <div class="wrap host">
-      <div>
-        <div class="eyebrow">TMM // 03 — Step Into the Network</div>
-        <h2>A role, not a collab.</h2>
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
         <p>
-          As TMM grows across media, performance, and city-scale work, we’re selectively opening the door to future hosts and on-air talent who want to carry specific shows, verticals, or markets forward.
+          For media systems, documentation, or potential partner work, send a brief with context, constraints, and what
+          the content needs to accomplish.
         </p>
-        <p>
-          This is a long-term creative and operational role inside a system built to last — not a one-off collaboration or content trade.
+        <a href="mailto:movementconsultant@gmail.com" class="email">movementconsultant@gmail.com</a>
+        <p class="fineprint">
+          Texas Movement Media does not guarantee coverage or output volume. Fit, alignment, and editorial standards
+          guide what is documented and produced.
         </p>
-        <p>
-          To apply, send a short intro, links to work you’ve already produced, and the show or vertical you’d want to host or build.
-        </p>
-        <p>
-          <a href="mailto:texasmovementmedia@gmail.com?subject=Host%20Application%3A%20%5BYour%20Name%20%2F%20Market%5D">Apply to host →</a>
-        </p>
-      </div>
+      </section>
 
-      <aside class="criteria">
-        <div class="k">We’re looking for —</div>
-        <ul>
-          <li>Documented on-camera reps you can point to.</li>
-          <li>Real depth in sports, founder economics, city development, or ceremony.</li>
-          <li>Systems thinking — a body of work, not just clips.</li>
-          <li>Calm, credible, economics-first, able to represent TMI unsupervised.</li>
-          <li>Based in or connected to a TMI market (Texas, the South, or aligned cities).</li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-</main>
-
-<footer class="foot">
-  <div class="wrap">
-    <div class="eyebrow">TMM // Connect</div>
-    <h2>Bring us the story.</h2>
-    <div class="connect">
-      <a href="mailto:texasmovementmedia@gmail.com">
-        <div class="k">Email</div>
-        <div class="v">texasmovementmedia@gmail.com</div>
-      </a>
-      <a href="https://www.youtube.com/@TexasMovementMedia" target="_blank" rel="noopener">
-        <div class="k">YouTube</div>
-        <div class="v">@TexasMovementMedia</div>
-      </a>
-      <a href="https://texasmovement.com" target="_blank" rel="noopener">
-        <div class="k">Network</div>
-        <div class="v">texasmovement.com</div>
-      </a>
-    </div>
-    <div class="legal">
-      <span>© Texas Movement Media — Part of Texas Movement International</span>
-      <span>STORIES THAT MOVE MARKETS</span>
-    </div>
-  </div>
-</footer>
-
-</body>
+      <footer class="footer">
+        <div class="footer-row">
+          <p>© 2026 Texas Movement International · Systems for people who move.</p>
+          <div class="footer-links">
+            <a href="#overview">Back to top ↑</a>
+            <span class="footer-separator">·</span>
+            <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">Founder</a>
+            <span class="footer-separator">·</span>
+            <a href="https://texasmovement.com" target="_blank" rel="noreferrer">TMI</a>
+            <span class="footer-separator">·</span>
+            <a href="https://social.texasmovement.com" target="_blank" rel="noreferrer">Social</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
