@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  variant?: "solid" | "ghost" | "solid-dark" | "ghost-dark";
+  external?: boolean;
+  class?: string;
+}
+
+const { href, variant = "solid", external = false, class: className = "" } = Astro.props;
+
+const variantClass =
+  variant === "ghost"
+    ? "btn--ghost"
+    : variant === "solid-dark"
+      ? "btn--on-dark"
+      : variant === "ghost-dark"
+        ? "btn--ghost-on-dark"
+        : "";
+---
+
+<a
+  class:list={["btn", variantClass, className]}
+  href={href}
+  target={external ? "_blank" : undefined}
+  rel={external ? "noreferrer" : undefined}
+>
+  <slot />
+  <span class="arrow" aria-hidden="true">&rarr;</span>
+</a>

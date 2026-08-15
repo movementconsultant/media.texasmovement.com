@@ -1,0 +1,17 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  hero?: boolean;
+}
+const { label, title, hero = false } = Astro.props;
+---
+
+<article class:list={["division", { "division--hero": hero }]}>
+  <div class="division-label">{label}</div>
+  <h3 class="division-title">{title}</h3>
+  <div class="division-body">
+    <slot />
+  </div>
+  <slot name="link" />
+</article>

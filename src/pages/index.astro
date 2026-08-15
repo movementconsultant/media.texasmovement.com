@@ -1,0 +1,224 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Btn from "../components/Btn.astro";
+
+const title = "";
+const description =
+  "Texas Movement Media is the signal layer of Texas Movement International — documentation, content systems, and the series that explain the work.";
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <!-- Hero -->
+  <section class="section hero">
+    <div class="wrap hero-inner">
+      <div>
+        <Eyebrow>Documentation &middot; Signal &middot; Series</Eyebrow>
+        <h1>Document the work. Build durable signal.</h1>
+        <p class="hero-body">
+          Texas Movement Media is the signal layer of Texas Movement International. It explains what the ecosystem
+          does, records the process, and distributes it deliberately — not everywhere at once.
+        </p>
+        <p class="hero-body">
+          It exists for the ecosystem itself, collaborators, and serious audiences who want clear explanation and
+          credible documentation — turning good work into systems, episodes, and series rather than letting it go
+          undocumented.
+        </p>
+        <div class="hero-ctas">
+          <Btn href="/series">Watch the series</Btn>
+          <Btn href="/collaborate" variant="ghost">Propose a collaboration</Btn>
+        </div>
+        <div class="hero-note">EPISODES &middot; SERIES &middot; RECORDS &mdash; BUILT TO EXPLAIN, NOT JUST ENTERTAIN</div>
+      </div>
+
+      <aside class="hero-figure">
+        <div class="hero-grid">
+          <div class="hero-node hero-node--source">
+            <div class="hero-node-label">Document</div>
+            <div>Capture the work and the decisions across lanes so they have a record, not just a memory.</div>
+          </div>
+          <div class="hero-node">
+            <div class="hero-node-label">Edit</div>
+            <div>Shape episodes and series with editorial discipline — signal over volume, context over clips.</div>
+          </div>
+          <div class="hero-node hero-node--terminal">
+            <div class="hero-node-label">Distribute</div>
+            <div>Send the work to the right channels deliberately, not randomly.</div>
+          </div>
+        </div>
+        <div class="hero-caption">FIG. 09 &mdash; MEDIA LANE &middot; DOCUMENT &rarr; EDIT &rarr; DISTRIBUTE</div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section id="who" class="section section--tight">
+    <div class="wrap grid-2">
+      <div>
+        <Eyebrow>Who it&rsquo;s for</Eyebrow>
+        <h2>The ecosystem, collaborators, and serious audiences.</h2>
+        <p>
+          Best fit: the Texas Movement lanes that need their work explained, collaborators and partners who want
+          documentation with standards, and audiences who care more about insight than hype.
+        </p>
+        <p>
+          It is for people who want to understand how systems, performance, and economic leverage work &mdash; not just
+          watch isolated highlights. The featured series are built with that audience in mind.
+        </p>
+        <p>It is a poor fit for campaigns that chase volume for its own sake or content that ignores context and consequences.</p>
+      </div>
+
+      <aside class="division">
+        <h3 class="division-title">Founder perspective and socials.</h3>
+        <p class="division-body">
+          Media carries the founder&rsquo;s perspective on systems, AI, and performance. To follow that lens directly,
+          use the founder&rsquo;s authority surfaces &mdash; not random clips.
+        </p>
+        <p class="division-body">
+          Founder: Alexander Mathai &mdash; the authority profile and operating record are at alexandermathai.com and on
+          LinkedIn.
+        </p>
+        <div class="division-link">
+          <a href="https://alexandermathai.com" target="_blank" rel="noreferrer">Go to alexandermathai.com &rarr;</a>
+        </div>
+        <div class="division-link">
+          <a href="https://www.linkedin.com/in/alexandermathai" target="_blank" rel="noreferrer">
+            Follow Alexander Mathai on LinkedIn &rarr;
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Ecosystem -->
+  <section id="ecosystem" class="section section--tight section--panel">
+    <div class="wrap">
+      <Eyebrow>Ecosystem connections</Eyebrow>
+      <h2>Media as the signal layer for every lane.</h2>
+      <p>
+        Texas Movement Media documents Consulting, Performance, HERO, Health, Distribution, FounderLink, Social, and
+        Reparations. It makes their work legible and durable.
+      </p>
+      <p>
+        The point is not to act as an external agency. Media is an in-ecosystem function &mdash; signal and
+        documentation that sit inside the same system as the work itself.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section section--tight">
+    <div class="wrap">
+      <Eyebrow>FAQ</Eyebrow>
+      <h2>Frequently asked questions.</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What is Texas Movement Media?</h3>
+          <p>
+            The signal layer of Texas Movement International. It documents the work, runs content systems, and
+            distributes them with editorial discipline.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Where do I watch the series?</h3>
+          <p>
+            See the <a href="/series">series page</a> for the flagship series and every channel in the network,
+            with links out to YouTube.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Who is Media for?</h3>
+          <p>
+            The ecosystem lanes, collaborators, and audiences who want credible explanation of systems, performance,
+            and economic leverage &mdash; not just entertainment.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Is Texas Movement Media a marketing agency?</h3>
+          <p>
+            No. It is an in-ecosystem media function focused on documentation and durable signal, not campaign churn
+            or generic brand work.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How does Media connect to Social?</h3>
+          <p>
+            Media produces the signal; Social is where much of that signal shows up publicly and where people are
+            routed from content into lanes.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I propose a collaboration or series?</h3>
+          <p>
+            See the <a href="/collaborate">collaborate page</a> for how proposals work and their current status.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="section section--tight section--panel">
+    <div class="wrap closing-cta">
+      <div>
+        <Eyebrow>Next</Eyebrow>
+        <h2>Start with the series, or bring us a proposal.</h2>
+        <p>Watch what the network has published, or read how documentation and collaboration proposals work.</p>
+      </div>
+      <div class="hero-ctas">
+        <Btn href="/series">Watch the series</Btn>
+        <Btn href="/collaborate" variant="ghost">Collaborate</Btn>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--hero-soft), var(--hero));
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 52px;
+    align-items: center;
+  }
+
+  .hero-body {
+    font-size: 1.02rem;
+    margin-bottom: 16px;
+    color: var(--ink-soft);
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 8px 0 20px;
+  }
+
+  .hero-note {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .closing-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>

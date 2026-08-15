@@ -1,0 +1,419 @@
+/* Texas Movement design system — see docs/MIGRATION_INVENTORY.md for source.
+   Tokens transcribed from the parent texasmovement.com production HTML,
+   shared identically across every rebuilt property. */
+:root {
+  --paper: #e7e8e2;
+  --panel: #ddded7;
+  --hero: #e9e0d5;
+  --hero-soft: #f3ebe2;
+  --hero-ink: #3c2a1d;
+  --hero-border: #b88d68;
+  --ink: #15181e;
+  --ink-soft: #454a54;
+  --line: #c4c6bd;
+  --line-strong: #a6a99f;
+  --graphite: #111217;
+  --white: #f4f5f0;
+  --compression: #274a78;
+  --tension: #bd3b22;
+  --wrap: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--compression);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  background: var(--ink);
+  color: var(--white);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 100;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 88px 0;
+}
+
+.section--tight {
+  padding: 72px 0;
+}
+
+.section--panel {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section--graphite {
+  background: var(--graphite);
+  color: var(--white);
+  border-top: 1px solid #2c313b;
+}
+
+.section--graphite p {
+  color: #c3c7cf;
+}
+
+@media (max-width: 900px) {
+  .section,
+  .section--tight {
+    padding: 64px 0;
+  }
+}
+
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 3.1vw, 2.4rem);
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+p {
+  color: var(--ink-soft);
+  max-width: 44em;
+}
+
+.section--graphite h1,
+.section--graphite h2,
+.section--graphite h3 {
+  color: var(--white);
+}
+
+/* ---------- Eyebrow ---------- */
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--tension);
+  flex: none;
+}
+
+.eyebrow--light {
+  color: #9aa0ab;
+}
+
+.eyebrow--light::before {
+  background: var(--tension);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--white);
+  transition: 0.18s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.btn--on-dark {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--graphite);
+}
+
+.btn--on-dark:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+.btn--ghost-on-dark {
+  border-color: #4b5563;
+  background: transparent;
+  color: var(--white);
+}
+
+.btn--ghost-on-dark:hover {
+  background: #2c313b;
+}
+
+.btn .arrow {
+  transition: transform 0.18s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- Division / card ---------- */
+.division {
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.division--hero {
+  background: linear-gradient(180deg, var(--hero-soft), var(--hero));
+  border-color: var(--hero-border);
+  color: var(--hero-ink);
+}
+
+.division-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.division-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.division-body {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.division-link {
+  margin-top: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.division-link a {
+  border-bottom: 1px solid transparent;
+}
+
+.division-link a:hover {
+  border-bottom-color: var(--ink);
+}
+
+/* ---------- Network block (dark sections only) ---------- */
+.network-block {
+  border-radius: 14px;
+  border: 1px solid #2c313b;
+  padding: 18px 18px 16px;
+}
+
+/* ---------- Hero figure ---------- */
+.hero-figure {
+  border: 1px solid var(--hero-border);
+  border-radius: 16px;
+  padding: 18px 18px 14px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+}
+
+.hero-node {
+  border-radius: 12px;
+  padding: 10px 10px 9px;
+  background: var(--hero-soft);
+  border: 1px solid var(--hero-border);
+  min-height: 84px;
+  color: var(--hero-ink);
+}
+
+.hero-node-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.65rem;
+  margin-bottom: 4px;
+  color: var(--ink-soft);
+}
+
+.hero-node--source {
+  border-color: var(--tension);
+}
+
+.hero-node--terminal {
+  border-color: var(--compression);
+}
+
+.hero-caption {
+  margin-top: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+/* ---------- Grids ---------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  padding: 16px 16px 14px;
+  background: var(--paper);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Notice / gated-CTA callout ---------- */
+.notice {
+  border-radius: 14px;
+  border: 1px dashed var(--line-strong);
+  background: var(--panel);
+  padding: 18px 20px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.notice strong {
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

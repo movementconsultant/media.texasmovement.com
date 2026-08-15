@@ -1,0 +1,212 @@
+---
+// Page-level nav for the Media property. Fixes the known a11y gap in the
+// current production HTML: `nav { display: none }` under 900px with no
+// mobile menu replacement. This version keeps the links in the DOM at all
+// times and adds an accessible disclosure button for small screens.
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  links: NavLink[];
+  currentPath: string;
+}
+
+const { links, currentPath } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="wrap topbar">
+    <a href="/" class="brand" aria-label="Texas Movement Media home">
+      <span class="brand-mark">TEXAS MOVEMENT</span>
+      <span class="brand-sub">MEDIA</span>
+    </a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-nav"
+      id="nav-toggle"
+    >
+      <span class="nav-toggle-label">Menu</span>
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" aria-label="Primary">
+      <ul>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href} aria-current={currentPath === link.href ? "page" : undefined}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: rgba(231, 232, 226, 0.92);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+  }
+
+  .topbar {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .brand {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-sub {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    /* --tension (#bd3b22) as text on --paper is ~4.47:1, just under the
+       4.5:1 WCAG AA threshold for normal-size text. #aa351e is the same
+       rust hue darkened ~10% — 5.26:1 — used here only where --tension is
+       rendered as text rather than a decorative tick/border. */
+    color: #aa351e;
+  }
+
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+
+  .nav-toggle-icon {
+    width: 16px;
+    height: 10px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-toggle-icon::before,
+  .nav-toggle-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--ink);
+  }
+
+  .nav-toggle-icon::before {
+    top: 0;
+  }
+
+  .nav-toggle-icon::after {
+    bottom: 0;
+  }
+
+  nav[aria-label="Primary"] ul {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav[aria-label="Primary"] a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 6px 2px;
+    display: inline-block;
+  }
+
+  nav[aria-label="Primary"] a:hover,
+  nav[aria-label="Primary"] a[aria-current="page"] {
+    color: var(--ink);
+  }
+
+  nav[aria-label="Primary"] a[aria-current="page"] {
+    border-bottom: 1px solid var(--tension);
+  }
+
+  @media (max-width: 720px) {
+    .nav-toggle {
+      display: inline-flex;
+    }
+
+    nav[aria-label="Primary"] {
+      flex-basis: 100%;
+      display: none;
+    }
+
+    nav[aria-label="Primary"].is-open {
+      display: block;
+    }
+
+    nav[aria-label="Primary"] ul {
+      flex-direction: column;
+      gap: 4px;
+      padding: 12px 0 4px;
+      justify-content: flex-start;
+    }
+
+    nav[aria-label="Primary"] a {
+      display: block;
+      padding: 10px 4px;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById("nav-toggle");
+  const nav = document.getElementById("primary-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      nav.classList.toggle("is-open", !expanded);
+    });
+
+    // Keep the panel visible (and toggle state consistent) if the viewport
+    // is resized past the mobile breakpoint while the menu is open.
+    const mq = window.matchMedia("(min-width: 721px)");
+    mq.addEventListener("change", (e) => {
+      if (e.matches) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+</script>

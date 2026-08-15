@@ -1,0 +1,134 @@
+---
+import { liveFooterFor, LEGAL_LINKS, liveSocialAccounts } from "../lib/site.ts";
+
+// Ecosystem footer — live properties only (liveFooterFor filters out
+// "building"/"planned" properties even though the raw constants
+// footerFor() would include them).
+const ecosystem = liveFooterFor("media");
+
+// Media-lane social accounts, restricted to resolved (non-TBD) entries.
+const mediaSocial = liveSocialAccounts().filter((a) => a.lane === "media");
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">TEXAS MOVEMENT MEDIA</div>
+      <p class="footer-copy">
+        &copy; {new Date().getFullYear()} Texas Movement International &middot; Media lane &mdash; media.texasmovement.com
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-heading">Ecosystem</div>
+      <ul class="footer-links">
+        {
+          ecosystem.map((item) => (
+            <li>
+              <a href={item.href} target={item.isCurrent ? undefined : "_blank"} rel={item.isCurrent ? undefined : "noreferrer"}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    {
+      mediaSocial.length > 0 && (
+        <div class="footer-col">
+          <div class="footer-heading">Follow</div>
+          <ul class="footer-links">
+            {mediaSocial.map((a) => (
+              <li>
+                <a href={a.url as string} target="_blank" rel="noreferrer">
+                  {a.platform} {a.handle}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+
+    <div class="footer-col">
+      <div class="footer-heading">Legal</div>
+      <ul class="footer-links">
+        {
+          LEGAL_LINKS.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 48px 0 40px;
+    background: var(--graphite);
+    color: #9aa0ab;
+    border-top: 1px solid #1f2937;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-brand {
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--white);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .footer-copy {
+    color: #9aa0ab;
+    font-size: 0.76rem;
+    max-width: 26em;
+  }
+
+  .footer-heading {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    /* #838a97 on --graphite (#111217) is ~5.4:1 — #6b7280 (the design
+       system's default muted gray) only clears ~3.9:1 on this dark
+       background, which fails WCAG AA for normal-size text. */
+    color: #838a97;
+    font-size: 0.68rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-transform: capitalize;
+  }
+
+  .footer-links a:hover {
+    color: #e5e7eb;
+  }
+
+  @media (max-width: 720px) {
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

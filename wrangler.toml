@@ -1,0 +1,17 @@
+## Cloudflare Pages scaffold for media.texasmovement.com.
+##
+## This site is Astro `output: "static"` — no SSR adapter is required for a
+## static Cloudflare Pages deployment; Pages serves the `dist/` build output
+## directly. This file exists so the project is one-click-ready once a human
+## with Cloudflare dashboard access connects the repository. No live
+## deployment has been triggered from this build (no Cloudflare credentials
+## are available here) — see docs/LAUNCH_BLOCKERS.md.
+name = "tmi-media"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"
+
+[vars]
+# PUBLIC_PREVIEW should be set to "true" on any non-production Pages
+# deployment (preview branches, PR previews) and "false"/unset on the
+# production deployment bound to media.texasmovement.com.
+PUBLIC_PREVIEW = "false"

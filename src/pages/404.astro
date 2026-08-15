@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Btn from "../components/Btn.astro";
+
+const title = "Page Not Found";
+const description = "This page does not exist on Texas Movement Media.";
+---
+
+<BaseLayout title={title} description={description} path="/404">
+  <section class="section">
+    <div class="wrap">
+      <Eyebrow>404</Eyebrow>
+      <h1>That page doesn&rsquo;t exist.</h1>
+      <p>The page you were looking for has moved or was never published.</p>
+      <div class="hero-ctas">
+        <Btn href="/">Back to home</Btn>
+        <Btn href="/series" variant="ghost">Watch the series</Btn>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+</style>

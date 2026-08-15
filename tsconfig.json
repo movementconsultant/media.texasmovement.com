@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "packages/constants/node_modules"],
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@tmi/constants": ["./packages/constants/src/index.ts"]
+    }
+  }
+}
