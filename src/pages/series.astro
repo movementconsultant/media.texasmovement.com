@@ -1,0 +1,286 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Btn from "../components/Btn.astro";
+import { accountsForLane } from "@tmi/constants";
+import { liveSocialAccounts } from "../lib/site.ts";
+
+const title = "Series";
+const description =
+  "Watch the flagship Shades of AI series and every Texas Movement channel in the network — Pro Talks, productions, and shorts.";
+
+// Media's own resolved (non-TBD) social accounts.
+const mediaAccounts = liveSocialAccounts().filter((a) => a.lane === "media");
+// Cross-network channels already documented on the legacy site's listing
+// page — sourced live from the constants registry, not hard-coded.
+const heroYoutube = accountsForLane("hero").filter((a) => a.platform === "youtube" && a.url);
+const performanceYoutube = accountsForLane("performance").filter((a) => a.platform === "youtube" && a.url);
+---
+
+<BaseLayout title={title} description={description} path="/series">
+  <section class="section hero-band">
+    <div class="wrap">
+      <Eyebrow>Watch</Eyebrow>
+      <h1>The flagship series, and every channel in the network.</h1>
+      <p class="lede">
+        Start with Shades of AI, then browse the formats and channels that make up the rest of Texas Movement
+        Media&rsquo;s output.
+      </p>
+    </div>
+  </section>
+
+  <!-- Shades of AI -->
+  <section id="shades" class="section section--panel">
+    <div class="wrap">
+      <Eyebrow>Featured series &middot; Shades of AI</Eyebrow>
+      <h2>Shades of AI &mdash; systems, culture, and character in public.</h2>
+      <p>
+        Shades of AI is the flagship series on Texas Movement Media&rsquo;s YouTube channel. It covers the
+        intersection of AI, systems, cultural norms, and character &mdash; built as episodes you can think with, not
+        just watch once.
+      </p>
+
+      <div class="cards-grid">
+        <article class="division">
+          <div class="division-label">Series</div>
+          <h3 class="division-title">Shades of AI playlist</h3>
+          <p class="division-body">
+            A dedicated playlist on the Texas Movement Media channel that collects Shades of AI episodes in one
+            place so you can follow the series as it evolves.
+          </p>
+          <div class="division-link">
+            <a
+              href="https://www.youtube.com/playlist?list=PLfuA6emw6UmxLB43itgFOb0JnXdUwBAHV"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Shades of AI playlist &rarr;
+            </a>
+          </div>
+        </article>
+
+        <article class="division">
+          <div class="division-label">Angle</div>
+          <h3 class="division-title">AI and systems</h3>
+          <p class="division-body">
+            Episodes break down how AI interacts with systems, decisions, and operating structures &mdash; using
+            examples founders and operators can actually apply.
+          </p>
+        </article>
+
+        <article class="division">
+          <div class="division-label">Angle</div>
+          <h3 class="division-title">Culture and norms</h3>
+          <p class="division-body">
+            Shades of AI also looks at cultural norms and behavior, not just technology, so the conversation stays
+            grounded in people, not abstractions.
+          </p>
+        </article>
+
+        <article class="division">
+          <div class="division-label">Angle</div>
+          <h3 class="division-title">Character and leverage</h3>
+          <p class="division-body">
+            The series keeps character and economic leverage in view &mdash; how systems and AI choices shape real
+            lives and long-horizon outcomes.
+          </p>
+        </article>
+      </div>
+
+      <div class="hero-ctas">
+        <Btn
+          href="https://www.youtube.com/playlist?list=PLfuA6emw6UmxLB43itgFOb0JnXdUwBAHV"
+          external
+        >
+          Watch Shades of AI on YouTube
+        </Btn>
+        <Btn
+          href="https://www.youtube.com/channel/UCnc6EwpsSJJO4NtbsS-UDFg"
+          variant="ghost"
+          external
+        >
+          Visit the Texas Movement Media channel
+        </Btn>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formats -->
+  <section id="formats" class="section">
+    <div class="wrap">
+      <Eyebrow>Formats</Eyebrow>
+      <h2>Three formats. One thesis.</h2>
+      <p>
+        Better athletes and founders generate better stories; better stories create better markets. Every format is
+        built to compound &mdash; content that earns attention and turns it into real signal for the people and
+        systems in frame.
+      </p>
+      <div class="cards-grid">
+        <article class="division">
+          <div class="division-label">Format &mdash; A</div>
+          <h3 class="division-title">Pro Talks</h3>
+          <p class="division-body">
+            Long-form athlete and founder interviews that get past the highlight reel to the system underneath the
+            performance.
+          </p>
+        </article>
+        <article class="division">
+          <div class="division-label">Format &mdash; B</div>
+          <h3 class="division-title">Productions</h3>
+          <p class="division-body">
+            Cinematic, documentary-style features on movements, markets, and the people building them &mdash; made to
+            last.
+          </p>
+        </article>
+        <article class="division">
+          <div class="division-label">Format &mdash; C</div>
+          <h3 class="division-title">Shorts</h3>
+          <p class="division-body">Sharp, fast cuts engineered for reach &mdash; the top of the funnel for everything else.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content systems -->
+  <section id="systems" class="section section--panel">
+    <div class="wrap">
+      <Eyebrow>Content systems</Eyebrow>
+      <h2>Formats, pipelines, and documentation that compound.</h2>
+      <p>
+        Texas Movement Media runs content like systems: repeatable formats, pipelines, and documentation that make
+        episodes and series compound instead of fragment.
+      </p>
+      <div class="cards-grid">
+        <article class="division">
+          <div class="division-label">System</div>
+          <h3 class="division-title">Documentation</h3>
+          <p class="division-body">
+            We capture the process and decisions behind the work so there is a record to point to &mdash; not just a
+            highlight reel.
+          </p>
+        </article>
+        <article class="division">
+          <div class="division-label">System</div>
+          <h3 class="division-title">Repeatable formats</h3>
+          <p class="division-body">
+            Pro Talks, series like Shades of AI, and other formats are built to be reused and iterated, not
+            reinvented every time.
+          </p>
+        </article>
+        <article class="division">
+          <div class="division-label">System</div>
+          <h3 class="division-title">Distribution</h3>
+          <p class="division-body">
+            Signal goes where it belongs, rather than being pushed everywhere for its own sake.
+          </p>
+        </article>
+        <article class="division">
+          <div class="division-label">System</div>
+          <h3 class="division-title">Production support</h3>
+          <p class="division-body">
+            Editorial and production support for founder-facing and ecosystem content so standards stay high and the
+            story stays coherent.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network -->
+  <section id="network" class="section">
+    <div class="wrap">
+      <Eyebrow>Network</Eyebrow>
+      <h2>Follow the channels.</h2>
+      <p>The official Texas Movement channels &mdash; the best way to follow productions, performance science, and founder stories directly.</p>
+
+      <div class="channel-grid">
+        {
+          mediaAccounts.map((a) => (
+            <a class="channel" href={a.url as string} target="_blank" rel="noreferrer">
+              <span class="channel-name">{a.handle}</span>
+              <span class="channel-meta">{a.platform} &middot; Texas Movement Media</span>
+            </a>
+          ))
+        }
+        {
+          heroYoutube.map((a) => (
+            <a class="channel" href={a.url as string} target="_blank" rel="noreferrer">
+              <span class="channel-name">{a.handle}</span>
+              <span class="channel-meta">{a.platform} &middot; HERO</span>
+            </a>
+          ))
+        }
+        {
+          performanceYoutube.map((a) => (
+            <a class="channel" href={a.url as string} target="_blank" rel="noreferrer">
+              <span class="channel-name">{a.handle}</span>
+              <span class="channel-meta">{a.platform} &middot; Performance</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-band {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 56px;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    max-width: 42em;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  /* Flexbox rather than CSS grid: with a variable, non-multiple-of-4 number
+     of live social accounts, an auto-fit grid leaves an empty trailing
+     track in the last row that paints as a bare gap-color block. Flexbox
+     with wrap + explicit basis avoids that without needing to know the
+     count up front. */
+  .channel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    background: var(--line-strong);
+    border: 1px solid var(--line-strong);
+    margin-top: 24px;
+  }
+
+  .channel {
+    background: var(--paper);
+    padding: 22px 22px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1 1 260px;
+    transition: background 0.15s ease;
+  }
+
+  .channel:hover {
+    background: var(--panel);
+  }
+
+  .channel-name {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    text-transform: capitalize;
+  }
+
+  .channel-meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+</style>

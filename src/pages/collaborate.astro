@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Btn from "../components/Btn.astro";
+import { verifiedMediaContact } from "../lib/site.ts";
+
+const title = "Collaborate";
+const description =
+  "How to propose a documentation, series, or hosting collaboration with Texas Movement Media, and the current status of intake.";
+
+const contact = verifiedMediaContact();
+---
+
+<BaseLayout title={title} description={description} path="/collaborate">
+  <section class="section hero-band">
+    <div class="wrap">
+      <Eyebrow>Collaborate</Eyebrow>
+      <h1>Bring us a documentation, series, or hosting proposal.</h1>
+      <p class="lede">
+        As Texas Movement Media grows across documentation, performance, and city-scale work, it selectively opens
+        the door to collaborators, future hosts, and on-air talent who want to carry specific shows or verticals
+        forward. This is considered work, not a generic contact form.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <Eyebrow>What to send</Eyebrow>
+        <h2>Send a brief, not a pitch deck.</h2>
+        <p>
+          For documentation, series, or collaboration inquiries, include context, constraints, the lanes involved,
+          and what a good outcome looks like. Include any timelines and channels that matter. If you&rsquo;re
+          proposing to host or build a show, include links to work you&rsquo;ve already produced and the vertical
+          you&rsquo;d want to carry.
+        </p>
+        <p>
+          Please keep inquiries focused on serious work and clear scope. Media exists to document and explain real
+          systems, not to chase volume or hype.
+        </p>
+      </div>
+
+      <aside class="division">
+        <h3 class="division-title">What we&rsquo;re looking for</h3>
+        <ul class="criteria-list">
+          <li>Documented on-camera or production work you can point to</li>
+          <li>Real depth in systems, performance, founder economics, or culture</li>
+          <li>Systems thinking &mdash; a body of work, not clips</li>
+          <li>Calm, credible, and economics- or evidence-first</li>
+          <li>Connected to a Texas Movement lane or market</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--panel">
+    <div class="wrap">
+      <Eyebrow>Status</Eyebrow>
+      <h2>Intake is not open yet.</h2>
+      {
+        contact ? (
+          <>
+            <p>Collaboration and hosting proposals are reviewed by the media team.</p>
+            <div class="hero-ctas">
+              <Btn href={contact.href}>{contact.label}</Btn>
+            </div>
+          </>
+        ) : (
+          <div class="notice">
+            <p>
+              <strong>The media collaboration inbox has not been confirmed yet.</strong> Texas Movement Media is not
+              publishing a live submission address on this page until an inbox is verified to exist and forward
+              reliably. This page will list a real contact route as soon as that is confirmed &mdash; see
+              <code>docs/LAUNCH_BLOCKERS.md</code> in the site repository for status.
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-band {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 40px;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    max-width: 44em;
+  }
+
+  .criteria-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .criteria-list li {
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+  }
+
+  .criteria-list li:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+</style>

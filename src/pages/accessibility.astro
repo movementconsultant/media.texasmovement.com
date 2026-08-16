@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+
+const title = "Accessibility";
+const description = "Accessibility statement for Texas Movement Media.";
+---
+
+<BaseLayout title={title} description={description} path="/accessibility">
+  <section class="section">
+    <div class="wrap">
+      <Eyebrow>Legal</Eyebrow>
+      <h1>Accessibility</h1>
+      <p>
+        This site targets WCAG 2.1 AA: a visible skip link, keyboard-reachable navigation (including the mobile
+        menu), a single focus style applied consistently, one <code>&lt;h1&gt;</code> per page, and descriptive alt
+        text on every meaningful image.
+      </p>
+      <div class="notice">
+        <p>
+          <strong>Formal accessibility statement pending.</strong> A full accessibility statement (conformance
+          target, known issues, and a contact route for reporting problems) has not been finalized for this
+          property. This page is a placeholder so the route exists and is linked honestly from the footer. See
+          <code>docs/LAUNCH_BLOCKERS.md</code> for status.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+
+const title = "Privacy Policy";
+const description = "Privacy policy for Texas Movement Media. Full policy text is pending.";
+---
+
+<BaseLayout title={title} description={description} path="/privacy">
+  <section class="section">
+    <div class="wrap">
+      <Eyebrow>Legal</Eyebrow>
+      <h1>Privacy Policy</h1>
+      <div class="notice">
+        <p>
+          <strong>Policy content pending.</strong> Texas Movement Media has not yet published a finalized privacy
+          policy for this property. This page is a placeholder so the route exists and is linked honestly from the
+          footer &mdash; it does not represent real policy text. See <code>docs/LAUNCH_BLOCKERS.md</code> for status.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

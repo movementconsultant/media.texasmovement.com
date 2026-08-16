@@ -1,0 +1,91 @@
+---
+import "../styles/global.css";
+import SkipLink from "../components/SkipLink.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { PROPERTIES, canonical } from "../lib/site.ts";
+import { pageTitle, TITLE_MAX, DESCRIPTION_MAX, ROBOTS, ogImage } from "@tmi/constants";
+import { PUBLIC_PREVIEW } from "astro:env/client";
+
+interface Props {
+  /** Page title WITHOUT the " — Texas Movement Media" suffix; pass "" for the home page. */
+  title: string;
+  description: string;
+  /** Path starting with "/", used for canonical + nav "current" state. */
+  path: string;
+  /** JSON-LD blocks to inject, if any (this property never emits organizationJsonLd()). */
+  jsonLd?: Record<string, unknown>[];
+}
+
+const { title, description, path, jsonLd = [] } = Astro.props;
+
+if (description.length > DESCRIPTION_MAX) {
+  console.warn(`[seo] description for ${path} exceeds DESCRIPTION_MAX (${DESCRIPTION_MAX}): ${description.length} chars`);
+}
+
+const fullTitle = pageTitle("media", title);
+if (fullTitle.length > TITLE_MAX + 40) {
+  // pageTitle() already falls back to the short label once it exceeds
+  // TITLE_MAX; this is just a loud guard in case both variants are long.
+  console.warn(`[seo] title for ${path} is unusually long: "${fullTitle}"`);
+}
+
+const canonicalUrl = canonical("media", path);
+const robots = PUBLIC_PREVIEW ? ROBOTS.staging : ROBOTS.production;
+const image = ogImage("media");
+
+const navLinks = [
+  { href: "/", label: "Overview" },
+  { href: "/series", label: "Series" },
+  { href: "/collaborate", label: "Collaborate" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#15181E" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={PROPERTIES.media.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Texas Movement Media" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image:alt" content="Texas Movement Media" />
+
+    {jsonLd.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} is:inline />)}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <SkipLink />
+    <Nav links={navLinks} currentPath={path} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

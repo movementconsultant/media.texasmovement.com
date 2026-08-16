@@ -1,0 +1,10 @@
+---
+interface Props {
+  light?: boolean;
+}
+const { light = false } = Astro.props;
+---
+
+<div class:list={["eyebrow", { "eyebrow--light": light }]}>
+  <slot />
+</div>

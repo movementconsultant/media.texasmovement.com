@@ -1,0 +1,6 @@
+# Netlify / Cloudflare Pages redirects syntax.
+# Old static-HTML paths -> new Astro routes. Nothing else on the old site
+# had an indexable path other than "/", which is unchanged.
+
+/media-index.html   /series   301
+/meta-tags.html     /         301
